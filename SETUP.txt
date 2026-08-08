@@ -1,0 +1,21 @@
+NEXKRIPA IT INDIA - SETUP
+
+1. Install Node.js 20+.
+2. Open this project folder in VS Code.
+3. Open terminal in the folder.
+4. Run: npm install
+5. Run: npm run dev
+6. Open: http://localhost:3000
+
+Pages:
+/            Home
+/about       About
+/portfolio   Portfolio
+/services    Services
+/clientele   Clientele
+/contact     Contact / Project Wizard
+
+IMPORTANT:
+- The enquiry form interaction is complete on the frontend.
+- To receive real emails, connect the submit function in app/contact/page.js to EmailJS, Formspree, Resend, or your own API.
+- Replace concept projects/client placeholders with verified NexKripa work as you add clients.
