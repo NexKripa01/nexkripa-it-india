@@ -62,7 +62,7 @@ export default function AboutPage() {
             <div className="nk-about-orbit nk-about-orbit-one" />
             <div className="nk-about-orbit nk-about-orbit-two" />
             <div className="nk-about-orbit nk-about-orbit-three" />
-            <strong>NK</strong>
+            <strong>GV</strong>
             <span>DIGITAL · TECHNOLOGY · INDIA</span>
           </div>
         </div>

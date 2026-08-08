@@ -22,7 +22,7 @@ export default function SiteFooter() {
         <div className="ref-footer-block">
           <h3>START A PROJECT</h3>
           <p>Write to Us</p>
-          <a href="mailto:hello@nexkripa.com">hello@nexkripa.com</a>
+          <a href="mailto:hello@nexkripa.com">nexkripa@gmail.com</a>
         </div>
 
         <div className="ref-footer-block">
@@ -30,7 +30,7 @@ export default function SiteFooter() {
           <p>
             NexKripa IT INDIA
             <br />
-            Mumbai, Maharashtra, India
+            Andheri (W), Mumbai - 400066
           </p>
         </div>
 
