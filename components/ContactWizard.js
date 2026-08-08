@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const projectTypes = [
   "WEBSITE",
@@ -51,6 +52,10 @@ export default function ContactWizard() {
 
   const [errors, setErrors] = useState({});
 
+  // EMAILJS
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState("");
+
   // Step change hote hi page top par
   useEffect(() => {
     window.scrollTo({
@@ -96,8 +101,7 @@ export default function ContactWizard() {
     if (!formData.email.trim()) {
       newErrors.email = "Please enter your email address.";
     } else {
-      const emailPattern =
-        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       if (!emailPattern.test(formData.email)) {
         newErrors.email = "Please enter a valid email address.";
@@ -111,21 +115,18 @@ export default function ContactWizard() {
       const cleanedPhone = formData.phone.replace(/\D/g, "");
 
       if (cleanedPhone.length < 10 || cleanedPhone.length > 15) {
-        newErrors.phone =
-          "Please enter a valid phone number.";
+        newErrors.phone = "Please enter a valid phone number.";
       }
     }
 
     // COMPANY / BRAND TYPE
     if (!formData.companyType) {
-      newErrors.companyType =
-        "Please select an option.";
+      newErrors.companyType = "Please select an option.";
     }
 
     // PROJECT DETAILS
     if (!formData.message.trim()) {
-      newErrors.message =
-        "Please tell us about your project.";
+      newErrors.message = "Please tell us about your project.";
     } else if (formData.message.trim().length < 10) {
       newErrors.message =
         "Please provide a little more project detail.";
@@ -134,7 +135,8 @@ export default function ContactWizard() {
     return newErrors;
   };
 
-  const submitForm = (event) => {
+  // EMAILJS SUBMIT
+  const submitForm = async (event) => {
     event.preventDefault();
 
     const validationErrors = validateForm();
@@ -152,7 +154,40 @@ export default function ContactWizard() {
     }
 
     setErrors({});
-    setSubmitted(true);
+    setSending(true);
+    setSendError("");
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      company_type: formData.companyType,
+      project_type: projectType,
+      services: selectedServices.join(", "),
+      message: formData.message,
+    };
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        {
+          publicKey:
+            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+        }
+      );
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+
+      setSendError(
+        "Something went wrong. Please try again."
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   const startAgain = () => {
@@ -170,6 +205,7 @@ export default function ContactWizard() {
     });
 
     setErrors({});
+    setSendError("");
   };
 
   if (submitted) {
@@ -260,6 +296,7 @@ export default function ContactWizard() {
               NEXT →
             </button>
           </div>
+
         </section>
       )}
 
@@ -328,6 +365,7 @@ export default function ContactWizard() {
             </button>
 
           </div>
+
         </section>
       )}
 
@@ -525,6 +563,14 @@ export default function ContactWizard() {
 
           </div>
 
+          {/* EMAILJS ERROR */}
+
+          {sendError && (
+            <small className="form-warning">
+              ⚠ {sendError}
+            </small>
+          )}
+
           {/* ================= ACTIONS ================= */}
 
           <div className="ref-contact-actions">
@@ -533,6 +579,7 @@ export default function ContactWizard() {
               type="button"
               className="ref-contact-back"
               onClick={() => setStep(2)}
+              disabled={sending}
             >
               ← BACK
             </button>
@@ -540,8 +587,11 @@ export default function ContactWizard() {
             <button
               type="submit"
               className="ref-contact-next"
+              disabled={sending}
             >
-              SEND ENQUIRY →
+              {sending
+                ? "SENDING..."
+                : "SEND ENQUIRY →"}
             </button>
 
           </div>
