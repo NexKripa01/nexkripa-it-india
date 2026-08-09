@@ -1,9 +1,13 @@
 import ContactWizard from "@/components/ContactWizard";
 
 export const metadata = {
-  title: "Contact | NexKripa IT INDIA",
+  title: "Contact",
   description:
     "Start a project with NexKripa IT INDIA for web, design, branding and AI solutions.",
+
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

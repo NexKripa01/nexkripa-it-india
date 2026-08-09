@@ -1,7 +1,11 @@
 export const metadata = {
-  title: "Privacy Policy | NexKripa IT INDIA",
+  title: "Privacy Policy",
   description:
     "Privacy Policy for NexKripa IT INDIA explaining how personal information may be collected, used and protected.",
+
+  alternates: {
+    canonical: "/privacy-policy",
+  },
 };
 
 const sections = [

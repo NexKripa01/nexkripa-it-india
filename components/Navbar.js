@@ -18,25 +18,36 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+
     return () => {
       document.body.style.overflow = "";
     };
   }, [open]);
 
-  const closeMenu = () => setOpen(false);
+  const closeMenu = () => {
+    setOpen(false);
+  };
+
+  const checkActive = (href) => {
+    if (href === "/services") {
+      return (
+        pathname === "/services" ||
+        pathname.startsWith("/services/")
+      );
+    }
+
+    return pathname === href;
+  };
 
   return (
     <>
-      <header className="nav-shell home-nav ref-main-nav">
-        <div className="nav-inner ref-main-nav-inner">
+      <header className="ref-navbar">
+        <div className="ref-navbar-inner">
           <Link
             href="/"
-            className="brand ref-nav-brand"
-            aria-label="NexKripa IT INDIA home"
+            className="ref-nav-brand"
             onClick={closeMenu}
           >
-
-
             <span className="brand-copy ref-nav-brand-copy">
               <strong>NexKripa</strong>
               <small>IT INDIA</small>
@@ -45,7 +56,9 @@ export default function Navbar() {
 
           <button
             type="button"
-            className={`ref-hamburger ${open ? "is-open" : ""}`}
+            className={`ref-hamburger ${
+              open ? "is-open" : ""
+            }`}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((value) => !value)}
@@ -57,13 +70,27 @@ export default function Navbar() {
         </div>
       </header>
 
-      <div className={`ref-menu-overlay ${open ? "is-open" : ""}`}>
-        <div className="ref-menu-bg" aria-hidden="true" />
-        <div className="ref-menu-shade" aria-hidden="true" />
+      <div
+        className={`ref-menu-overlay ${
+          open ? "is-open" : ""
+        }`}
+      >
+        <div
+          className="ref-menu-bg"
+          aria-hidden="true"
+        />
 
-        <nav className="ref-menu-columns" aria-label="Main navigation">
+        <div
+          className="ref-menu-shade"
+          aria-hidden="true"
+        />
+
+        <nav
+          className="ref-menu-columns"
+          aria-label="Main navigation"
+        >
           {menuItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = checkActive(item.href);
 
             return (
               <Link

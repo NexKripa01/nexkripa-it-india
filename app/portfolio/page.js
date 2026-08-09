@@ -5,46 +5,62 @@ const projects = [
   {
     title: "PujaDham",
     category: "Website Development",
-    className: "pf-img-1",
+    image: "/portfolio/pujadham.jpg",
     href: "https://www.pujadham.co.in/",
     external: true,
   },
   {
     title: "NexKripa IT INDIA",
     category: "Brand Experience",
-    className: "pf-img-2",
+    image: "/portfolio/nexkripa.jpg",
     href: "/",
   },
   {
     title: "AI Flow",
     category: "AI Automation",
-    className: "pf-img-3",
+    image: "/portfolio/ai-flow.jpg",
     href: "/contact",
   },
   {
     title: "EduCore",
     category: "Education Website",
-    className: "pf-img-4",
+    image: "/portfolio/educore.jpg",
     href: "/contact",
   },
   {
     title: "ShopGrid",
     category: "E-Commerce",
-    className: "pf-img-5",
+    image: "/portfolio/shopgrid.jpg",
     href: "/contact",
   },
 ];
 
 export const metadata = {
-  title: "Portfolio | NexKripa IT INDIA",
+  title: "Portfolio",
   description: "Selected work by NexKripa IT INDIA.",
+
+  alternates: {
+    canonical: "/portfolio",
+  },
 };
 
 function ProjectCard({ project }) {
   const content = (
-    <article className={`pf-project-card ${project.className}`}>
-      <div className="pf-project-overlay">
-        <span>{project.category}</span>
+    <article className="pf-project-card">
+      <div
+        className="pf-project-image"
+        style={{
+          backgroundImage: `url("${project.image}")`,
+        }}
+      />
+
+      <div className="pf-project-overlay" />
+
+      <div className="pf-project-content">
+        <span className="pf-project-category">
+          {project.category}
+        </span>
+
         <h3>{project.title}</h3>
       </div>
     </article>
@@ -52,26 +68,44 @@ function ProjectCard({ project }) {
 
   if (project.external) {
     return (
-      <a href={project.href} target="_blank" rel="noreferrer">
+      <a
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="pf-project-link"
+      >
         {content}
       </a>
     );
   }
 
-  return <Link href={project.href}>{content}</Link>;
+  return (
+    <Link
+      href={project.href}
+      className="pf-project-link"
+    >
+      {content}
+    </Link>
+  );
 }
 
 export default function PortfolioPage() {
   return (
     <>
-      <section className="pf-reference-page">
-        <div className="pf-reference-hero">
+      <section className="portfolio-reference-page">
+        <div className="portfolio-reference-inner">
+
           <Reveal>
-            <div className="pf-reference-title">
-              <h1>OUR PORTFOLIO</h1>
-              <p>
-                A <strong>Highlight</strong> Reel By Our Finest
-              </p>
+            <div className="pf-heading-wrap">
+              <span className="pf-kicker">
+                OUR PORTFOLIO
+              </span>
+
+              <h1>
+                A Highlight Reel
+                <br />
+                By Our <em>Finest</em>
+              </h1>
             </div>
           </Reveal>
 
@@ -81,7 +115,10 @@ export default function PortfolioPage() {
 
               <div className="pf-project-slider">
                 {projects.map((project) => (
-                  <ProjectCard key={project.title} project={project} />
+                  <ProjectCard
+                    key={project.title}
+                    project={project}
+                  />
                 ))}
 
                 <button
@@ -96,15 +133,24 @@ export default function PortfolioPage() {
           </Reveal>
 
           <div className="pf-all-websites-row">
-            <Link href="/portfolio" className="pf-outline-btn">
+            <Link
+              href="/portfolio"
+              className="pf-outline-btn"
+            >
               ALL WEBSITES
             </Link>
           </div>
 
           <Reveal>
             <div className="pf-excellence">
-              <h3>EXPECT NOTHING BUT EXCELLENCE</h3>
-              <Link href="/about" className="pf-outline-btn">
+              <h3>
+                EXPECT NOTHING BUT EXCELLENCE
+              </h3>
+
+              <Link
+                href="/about"
+                className="pf-outline-btn"
+              >
                 KNOW MORE
               </Link>
             </div>
@@ -121,6 +167,7 @@ export default function PortfolioPage() {
               SERVICES <span>→</span>
             </Link>
           </div>
+
         </div>
       </section>
     </>

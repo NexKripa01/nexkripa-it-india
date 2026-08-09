@@ -1,19 +1,24 @@
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "Clientele | NexKripa IT INDIA",
+  title: "Clientele",
   description:
-    "Client stories and feedback for NexKripa IT INDIA.",
+    "Client stories, testimonials and feedback for NexKripa IT INDIA.",
+
+  alternates: {
+    canonical: "/clientele",
+  },
 };
 
 const clients = [
   {
-    image: "/clients/client-01.jpg",
+    image: "/clients/pujadham-client.png",
     initials: "C1",
     quote:
-      "Working with NexKripa was smooth, clear and focused. The process stayed simple from idea to delivery.",
-    name: "CLIENT 01",
-    company: "YOUR CLIENT",
+      "We are very happy with the PujaDham website developed by NexKripa IT INDIA. The team understood our requirements well and delivered a professional, smooth and easy-to-use website.",
+    name: "Jayprakash Shukla",
+    company: "PujaDham",
   },
   {
     image: "/clients/client-02.jpg",
@@ -23,45 +28,15 @@ const clients = [
     name: "CLIENT 02",
     company: "YOUR CLIENT",
   },
-  {
-    image: "/clients/client-03.jpg",
-    initials: "C3",
-    quote:
-      "A reliable approach, strong design sense and attention to usability made the overall experience easy to trust.",
-    name: "CLIENT 03",
-    company: "YOUR CLIENT",
-  },
-  {
-    image: "/clients/client-04.jpg",
-    initials: "C4",
-    quote:
-      "From planning to development, communication remained clear and every stage moved forward with purpose.",
-    name: "CLIENT 04",
-    company: "YOUR CLIENT",
-  },
-  {
-    image: "/clients/client-05.jpg",
-    initials: "C5",
-    quote:
-      "The final result felt polished, responsive and aligned with the direction we wanted for our digital presence.",
-    name: "CLIENT 05",
-    company: "YOUR CLIENT",
-  },
-  {
-    image: "/clients/client-06.jpg",
-    initials: "C6",
-    quote:
-      "NexKripa brought structure to the project and helped turn a rough idea into something much more complete.",
-    name: "CLIENT 06",
-    company: "YOUR CLIENT",
-  },
 ];
 
 export default function ClientelePage() {
   return (
     <>
-      <section className="client-tales-page">
+      <section className="client-tales-section">
         <div className="client-tales-inner">
+
+          {/* HEADING */}
           <Reveal>
             <div className="client-tales-heading">
               <h1>CLIENT&apos;S TALES</h1>
@@ -73,10 +48,12 @@ export default function ClientelePage() {
             </div>
           </Reveal>
 
+          {/* CLIENT CARDS */}
           <div className="client-tales-grid">
             {clients.map((client, index) => (
               <Reveal key={client.name} delay={index * 0.05}>
                 <article className="client-tale-card">
+
                   <div className="client-tale-visual">
                     <span className="client-tale-quote">“</span>
 
@@ -93,15 +70,46 @@ export default function ClientelePage() {
                     </div>
                   </div>
 
-                  <p className="client-tale-copy">{client.quote}</p>
+                  <p className="client-tale-copy">
+                    {client.quote}
+                  </p>
 
                   <div className="client-tale-meta">
                     <h2>{client.name}</h2>
                     <span>{client.company}</span>
                   </div>
+
                 </article>
               </Reveal>
             ))}
+
+            {/* 4TH CTA CARD */}
+            <Reveal delay={0.15}>
+              <Link
+                href="/contact"
+                className="client-tale-card client-tale-cta-card"
+                aria-label="Contact NexKripa IT INDIA"
+              >
+                <div className="client-tale-visual">
+                  <span className="client-tale-quote">↗</span>
+
+                  <div className="client-tale-avatar">
+                    <span>+</span>
+                  </div>
+                </div>
+
+                <p className="client-tale-copy">
+                  Have a project, idea or business you want to take digital?
+                  Let&apos;s create something meaningful together.
+                </p>
+
+                <div className="client-tale-meta">
+                  <h2>CLICK TO BE OUR CLIENTELE</h2>
+                  <span>START A PROJECT</span>
+                </div>
+              </Link>
+            </Reveal>
+
           </div>
         </div>
       </section>
