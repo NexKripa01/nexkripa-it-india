@@ -74,6 +74,14 @@ export default function SiteFooter() {
   >
     Git
   </a>
+  <a
+  href="https://www.youtube.com/channel/UCvTDbvm8VChxX74ryoZeSbg"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="YouTube"
+>
+  ▶
+</a>
 </div>
 
       <div className="ref-footer-bottom">
