@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
+import TeamSlider from "@/components/TeamSlider";
 
 export const metadata = {
   title: "About",
@@ -41,6 +42,37 @@ const values = [
   ["PROGRESS", "Build, learn, improve and keep moving."],
 ];
 
+const teamMembers = [
+  {
+    number: "01",
+    name: "KUMAR GAURAV",
+    role: "CO-FOUNDER",
+    work: "AI/ML & BACKEND DEVELOPMENT",
+    image: "/team/gaurav.png",
+  },
+  {
+    number: "02",
+    name: "VIJAY SHUKLA",
+    role: "CO-FOUNDER",
+    work: "FRONTEND & FULL-STACK DEVELOPMENT",
+    image: "/team/vijay.png",
+  },
+  {
+    number: "03",
+    name: "Aaryan Saroj",
+    role: "MEMBER",
+    work: "SOCIAL-MEDIA HANDELING",
+    image: "/team/aaryan.png",
+  },
+  {
+    number: "04",
+    name: "Nakul Jaiswal",
+    role: "MEMBER",
+    work: "DATABASE MANAGEMENT ",
+    image: "/team/nakul.png",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -63,7 +95,7 @@ export default function AboutPage() {
             <Reveal>
               <div className="nk-founders-image">
                 <Image
-                  src="/hero/we.png"
+                  src="/team/founders.png"
                   alt="NexKripa IT INDIA founders"
                   fill
                   priority
@@ -165,6 +197,8 @@ export default function AboutPage() {
               Different skills. One direction.
             </strong>
           </Reveal>
+
+          <TeamSlider members={teamMembers} />
         </div>
       </section>
 

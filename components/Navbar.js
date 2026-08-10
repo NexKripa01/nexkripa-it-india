@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -41,19 +42,38 @@ export default function Navbar() {
 
   return (
     <>
+      {/* NAVBAR */}
       <header className="ref-navbar">
         <div className="ref-navbar-inner">
+
+          {/* BRAND */}
           <Link
             href="/"
             className="ref-nav-brand"
             onClick={closeMenu}
+            aria-label="NexKripa IT INDIA Home"
           >
-            <span className="brand-copy ref-nav-brand-copy">
-              <strong>NexKripa</strong>
-              <small>IT INDIA</small>
+            <Image
+              src="/n-logo.png"
+              alt="NexKripa logo"
+              width={72}
+              height={72}
+              priority
+              className="ref-nav-symbol"
+            />
+
+            <span className="ref-nav-wordmark">
+              <strong>exKripa</strong>
+
+              <span className="ref-nav-subtitle">
+                <i />
+                IT INDIA
+                <i />
+              </span>
             </span>
           </Link>
 
+          {/* HAMBURGER */}
           <button
             type="button"
             className={`ref-hamburger ${
@@ -67,9 +87,11 @@ export default function Navbar() {
             <span className="ref-ham-middle" />
             <span className="ref-ham-bottom" />
           </button>
+
         </div>
       </header>
 
+      {/* FULL SCREEN MENU */}
       <div
         className={`ref-menu-overlay ${
           open ? "is-open" : ""

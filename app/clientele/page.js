@@ -20,14 +20,14 @@ const clients = [
     name: "Jayprakash Shukla",
     company: "PujaDham",
   },
-  {
-    image: "/clients/client-02.jpg",
-    initials: "C2",
-    quote:
-      "The team understood the requirement quickly and translated it into a modern, responsive digital experience.",
-    name: "CLIENT 02",
-    company: "YOUR CLIENT",
-  },
+  // {
+  //   image: "/clients/client-02.jpg",
+  //   initials: "C2",
+  //   quote:
+  //     "The team understood the requirement quickly and translated it into a modern, responsive digital experience.",
+  //   name: "CLIENT 02",
+  //   company: "YOUR CLIENT",
+  // },
 ];
 
 export default function ClientelePage() {

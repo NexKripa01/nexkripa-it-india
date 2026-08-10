@@ -2211,35 +2211,7 @@ main{position:relative;z-index:1}
   font-size:28px;
 }
 
-.pf-img-1{
-  background:
-    linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.22)),
-    url("/hero/scene-1.jpg") center/cover;
-}
 
-.pf-img-2{
-  background:
-    linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.22)),
-    url("/hero/scene-2.jpg") center/cover;
-}
-
-.pf-img-3{
-  background:
-    linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.22)),
-    url("/hero/scene-3.jpg") center/cover;
-}
-
-.pf-img-4{
-  background:
-    linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.22)),
-    url("/hero/scene-4.jpg") center/cover;
-}
-
-.pf-img-5{
-  background:
-    linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.22)),
-    url("/hero/scene-5.jpg") center/cover;
-}
 
 .pf-slider-arrow{
   position:sticky;
@@ -3240,10 +3212,7 @@ main{position:relative;z-index:1}
 .ref-menu-bg{
   position:absolute;
   inset:-2%;
-  background:
-    url("/hero/scene-2.jpg") center/cover no-repeat;
-  filter:grayscale(1) brightness(.45) contrast(1.05);
-  transform:scale(1.035);
+  background:#080808;
 }
 
 .ref-menu-shade{
@@ -11345,5 +11314,816 @@ main{position:relative;z-index:1}
   .eco-page *::after{
     transition-duration:.01ms!important;
     animation-duration:.01ms!important;
+  }
+}
+
+/* =========================================================
+   ABOUT — TEAM CARDS
+   Add this block to app/globals.css
+   ========================================================= */
+
+.nk-team-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  margin-top:64px;
+}
+
+.nk-team-card{
+  min-width:0;
+}
+
+.nk-team-card-image{
+  position:relative;
+  width:100%;
+  aspect-ratio:4 / 5;
+  overflow:hidden;
+  background:#111;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.nk-team-card-image img{
+  object-fit:cover;
+  object-position:center;
+  filter:grayscale(15%);
+  transition:
+    transform .7s cubic-bezier(.2,.7,.2,1),
+    filter .4s ease;
+}
+
+.nk-team-card-shade{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.08) 0%,
+      rgba(0,0,0,.05) 46%,
+      rgba(0,0,0,.82) 100%
+    );
+  pointer-events:none;
+}
+
+.nk-team-card-number{
+  position:absolute;
+  z-index:2;
+  top:24px;
+  left:24px;
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-size:10px;
+  letter-spacing:.12em;
+  backdrop-filter:blur(8px);
+  background:rgba(0,0,0,.18);
+}
+
+.nk-team-card-content{
+  position:absolute;
+  z-index:2;
+  left:28px;
+  right:28px;
+  bottom:28px;
+}
+
+.nk-team-card-role{
+  display:inline-block;
+  margin-bottom:10px;
+  color:#ff3d61;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+.nk-team-card-content h3{
+  margin:0;
+  color:#fff;
+  font-family:'Manrope',sans-serif;
+  font-size:clamp(30px,3.2vw,52px);
+  line-height:.95;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+}
+
+.nk-team-card:hover .nk-team-card-image img{
+  transform:scale(1.055);
+  filter:grayscale(0%);
+}
+
+.nk-team-card:hover .nk-team-card-image{
+  border-color:rgba(255,61,97,.58);
+}
+
+@media (max-width:820px){
+  .nk-team-grid{
+    gap:16px;
+    margin-top:50px;
+  }
+
+  .nk-team-card-content{
+    left:22px;
+    right:22px;
+    bottom:22px;
+  }
+
+  .nk-team-card-number{
+    top:20px;
+    left:20px;
+  }
+}
+
+@media (max-width:600px){
+  .nk-team-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+    margin-top:42px;
+  }
+
+  .nk-team-card-image{
+    aspect-ratio:4 / 4.8;
+  }
+
+  .nk-team-card-content h3{
+    font-size:clamp(30px,9vw,44px);
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .nk-team-card-image img{
+    transition:none;
+  }
+}
+
+.nk-team-card-work{
+  margin:12px 0 0;
+  color:rgba(255,255,255,.78);
+  font-size:11px;
+  font-weight:600;
+  line-height:1.5;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+@media (max-width:600px){
+  .nk-team-card-work{
+    margin-top:10px;
+    font-size:10px;
+    letter-spacing:.11em;
+  }
+}
+
+/* =========================================================
+   ABOUT TEAM — PORTFOLIO STYLE HORIZONTAL CARDS ON MOBILE
+   First card full/large + next card peeking, swipe horizontally
+   ========================================================= */
+
+@media (max-width:600px){
+  .nk-team-grid{
+    display:flex;
+    grid-template-columns:none;
+    gap:14px;
+    width:100%;
+    margin-top:42px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-inline:contain;
+    padding:0 18px 12px 0;
+    scrollbar-width:none;
+  }
+
+  .nk-team-grid::-webkit-scrollbar{
+    display:none;
+  }
+
+  .nk-team-grid > *{
+    flex:0 0 86%;
+    min-width:0;
+    scroll-snap-align:start;
+  }
+
+  .nk-team-card{
+    width:100%;
+    min-width:0;
+  }
+
+  .nk-team-card-image{
+    width:100%;
+    aspect-ratio:4 / 5;
+    min-height:420px;
+  }
+
+  .nk-team-card-content{
+    left:22px;
+    right:22px;
+    bottom:24px;
+  }
+
+  .nk-team-card-content h3{
+    font-size:clamp(30px,9vw,43px);
+    line-height:.95;
+  }
+
+  .nk-team-card-role{
+    margin-bottom:8px;
+    font-size:9px;
+    letter-spacing:.16em;
+  }
+
+  .nk-team-card-work{
+    margin-top:10px;
+    font-size:10px;
+    line-height:1.5;
+    letter-spacing:.10em;
+  }
+
+  .nk-team-card-number{
+    top:20px;
+    left:20px;
+    width:40px;
+    height:40px;
+  }
+}
+
+@media (max-width:390px){
+  .nk-team-grid > *{
+    flex-basis:88%;
+  }
+
+  .nk-team-card-image{
+    min-height:390px;
+  }
+}
+
+/* =========================================================
+   ABOUT TEAM — CARD ARROW
+   Existing Reveal / hover / swipe animations are unchanged.
+   ========================================================= */
+
+.nk-team-slider-shell{
+  position:relative;
+  width:100%;
+  min-width:0;
+}
+
+.nk-team-card-arrow{
+  position:absolute;
+  z-index:4;
+  top:50%;
+  right:18px;
+  width:52px;
+  height:52px;
+  transform:translateY(-50%);
+  border:1px solid rgba(255,255,255,.42);
+  border-radius:50%;
+  background:rgba(7,10,18,.42);
+  color:#fff;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    color .25s ease;
+}
+
+.nk-team-card-arrow span{
+  display:block;
+  font-size:24px;
+  line-height:1;
+  transform:translateY(-1px);
+}
+
+.nk-team-card-arrow:hover{
+  background:#ff3d61;
+  border-color:#ff3d61;
+  color:#fff;
+}
+
+.nk-team-card-arrow:focus-visible{
+  outline:2px solid #fff;
+  outline-offset:3px;
+}
+
+@media (max-width:600px){
+  .nk-team-card-arrow{
+    right:14px;
+    width:48px;
+    height:48px;
+  }
+
+  .nk-team-card-arrow span{
+    font-size:22px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .nk-team-card-arrow{
+    transition:none;
+  }
+}
+
+/* =========================================================
+   TEAM ARROW — OUTSIDE PHOTO, INSIDE CARD
+   Only arrow positioning changed. Existing animations unchanged.
+   ========================================================= */
+
+.nk-team-card{
+  position:relative;
+}
+
+.nk-team-card-arrow{
+  top:50%;
+  right:-66px;
+  transform:translateY(-50%);
+}
+
+@media (max-width:820px){
+  .nk-team-card-arrow{
+    right:-58px;
+  }
+}
+
+@media (max-width:600px){
+  .nk-team-card-arrow{
+    top:50%;
+    right:-54px;
+    width:48px;
+    height:48px;
+    transform:translateY(-50%);
+  }
+}
+
+@media (max-width:390px){
+  .nk-team-card-arrow{
+    right:-49px;
+    width:44px;
+    height:44px;
+  }
+}
+
+
+
+/* Keep original mobile card size; only make room between cards for the outside arrow */
+@media (max-width:600px){
+  .nk-team-grid{
+    gap:64px;
+  }
+
+  .nk-team-grid > *{
+    flex:0 0 86%;
+  }
+}
+
+@media (max-width:390px){
+  .nk-team-grid{
+    gap:58px;
+  }
+
+  .nk-team-grid > *{
+    flex-basis:88%;
+  }
+}
+
+
+/* =========================================================
+   FINAL TEAM CARD SIZE + ARROW VISIBILITY
+   - Mobile cards slightly larger
+   - Arrow hidden on laptop/desktop
+   - Existing animations unchanged
+   ========================================================= */
+
+@media (min-width:821px){
+  .nk-team-card-arrow{
+    display:none !important;
+  }
+}
+
+@media (max-width:820px){
+  .nk-team-grid{
+    gap:66px;
+  }
+
+  .nk-team-grid > *{
+    flex:0 0 90%;
+  }
+
+  .nk-team-card-image{
+    min-height:460px;
+  }
+}
+
+@media (max-width:600px){
+  .nk-team-grid{
+    gap:66px;
+  }
+
+  .nk-team-grid > *{
+    flex:0 0 92%;
+  }
+
+  .nk-team-card-image{
+    min-height:455px;
+  }
+}
+
+@media (max-width:390px){
+  .nk-team-grid{
+    gap:60px;
+  }
+
+  .nk-team-grid > *{
+    flex-basis:94%;
+  }
+
+  .nk-team-card-image{
+    min-height:425px;
+  }
+}
+
+/* =========================================================
+   FINAL NEXKRIPA NAVBAR
+   ========================================================= */
+
+.ref-navbar {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+
+  padding: 10px 22px !important;
+
+  background: transparent !important;
+
+  z-index: 120 !important;
+}
+
+.ref-navbar-inner {
+  width: 100% !important;
+  min-height: 70px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.ref-nav-brand {
+  display: flex !important;
+  align-items: center !important;
+
+  gap: 0 !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  text-decoration: none !important;
+
+  transform: none !important;
+}
+
+
+/* N LOGO */
+
+.ref-nav-symbol {
+  display: block !important;
+
+  width: 68px !important;
+  height: 68px !important;
+
+  object-fit: contain !important;
+
+  flex-shrink: 0 !important;
+
+  /*
+    Logo image ke andar agar thoda transparent
+    spacing hai to ye wordmark ko paas lata hai.
+  */
+  margin-right: -9px !important;
+}
+
+
+/* =========================================================
+   WORDMARK
+   ========================================================= */
+
+.ref-nav-wordmark {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  margin: 0 !important;
+
+  color: #ffffff !important;
+}
+
+
+/* exKripa */
+
+.ref-nav-wordmark strong {
+  display: block;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  color: #ffffff !important;
+
+  font-size: 34px !important;
+  font-weight: 650 !important;
+
+  line-height: 0.9 !important;
+
+  letter-spacing: -0.06em !important;
+}
+
+
+/* IT INDIA */
+
+.ref-nav-subtitle {
+  width: 100%;
+
+  margin-top: 7px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 7px !important;
+
+  color: #ffffff !important;
+
+  font-size: 8px !important;
+  font-weight: 700 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: 0.22em !important;
+}
+
+.ref-nav-subtitle i {
+  display: block;
+
+  width: 27px;
+  height: 1px;
+
+  background: currentColor;
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.ref-hamburger {
+  position: relative !important;
+
+  top: 0 !important;
+  right: 0 !important;
+
+  width: 62px !important;
+  height: 58px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+  background: transparent !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  justify-content: center !important;
+  align-items: flex-end !important;
+
+  gap: 8px !important;
+
+  cursor: pointer;
+
+  transform: none !important;
+}
+
+
+/* HAMBURGER LINES */
+
+.ref-hamburger span {
+  display: block;
+
+  height: 3px;
+
+  background: #ffffff;
+
+  border-radius: 999px;
+
+  transform-origin: center;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.25s ease,
+    width 0.3s ease;
+}
+
+.ref-ham-top {
+  width: 38px;
+}
+
+.ref-ham-middle {
+  width: 52px;
+}
+
+.ref-ham-bottom {
+  width: 43px;
+}
+
+
+/* OPEN STATE */
+
+.ref-hamburger.is-open {
+  gap: 0 !important;
+}
+
+.ref-hamburger.is-open .ref-ham-top {
+  width: 46px;
+  transform: translateY(3px) rotate(45deg);
+}
+
+.ref-hamburger.is-open .ref-ham-middle {
+  opacity: 0;
+  width: 0;
+}
+
+.ref-hamburger.is-open .ref-ham-bottom {
+  width: 46px;
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .ref-navbar {
+    padding: 9px 18px !important;
+  }
+
+  .ref-navbar-inner {
+    min-height: 66px !important;
+  }
+
+  .ref-nav-symbol {
+    width: 61px !important;
+    height: 61px !important;
+
+    margin-right: -8px !important;
+  }
+
+  .ref-nav-wordmark strong {
+    font-size: 31px !important;
+  }
+
+  .ref-nav-subtitle {
+    margin-top: 6px !important;
+
+    font-size: 7px !important;
+  }
+
+  .ref-nav-subtitle i {
+    width: 24px;
+  }
+
+  .ref-hamburger {
+    width: 56px !important;
+    height: 54px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .ref-navbar {
+    padding: 7px 12px !important;
+  }
+
+  .ref-navbar-inner {
+    min-height: 62px !important;
+  }
+
+
+  /* BRAND */
+
+  .ref-nav-brand {
+    gap: 0 !important;
+  }
+
+  .ref-nav-symbol {
+    width: 55px !important;
+    height: 55px !important;
+
+    margin-right: -7px !important;
+  }
+
+  .ref-nav-wordmark strong {
+    font-size: 28px !important;
+
+    line-height: 0.9 !important;
+  }
+
+  .ref-nav-subtitle {
+    margin-top: 5px !important;
+
+    gap: 5px !important;
+
+    font-size: 6px !important;
+
+    letter-spacing: 0.18em !important;
+  }
+
+  .ref-nav-subtitle i {
+    width: 21px;
+  }
+
+
+  /* HAMBURGER */
+
+  .ref-hamburger {
+    width: 50px !important;
+    height: 50px !important;
+
+    gap: 7px !important;
+  }
+
+  .ref-hamburger span {
+    height: 2.5px;
+  }
+
+  .ref-ham-top {
+    width: 31px;
+  }
+
+  .ref-ham-middle {
+    width: 43px;
+  }
+
+  .ref-ham-bottom {
+    width: 35px;
+  }
+
+
+  /* OPEN */
+
+  .ref-hamburger.is-open .ref-ham-top {
+    width: 40px;
+  }
+
+  .ref-hamburger.is-open .ref-ham-bottom {
+    width: 40px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .ref-navbar {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+
+  .ref-nav-symbol {
+    width: 51px !important;
+    height: 51px !important;
+
+    margin-right: -7px !important;
+  }
+
+  .ref-nav-wordmark strong {
+    font-size: 26px !important;
+  }
+
+  .ref-hamburger {
+    width: 46px !important;
   }
 }

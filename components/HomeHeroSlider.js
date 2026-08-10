@@ -4,28 +4,28 @@ import { useEffect, useMemo, useState } from "react";
 
 const slides = [
   {
-    word: "LOUD",
-    image: "/hero/crm.png",
+    word: "CREATORS",
+    image: "/hero/hero1.png",
     position: "50% 45%",
   },
   {
-    word: "AMAZING",
-    image: "/hero/media.jpg",
+    word: "BOLD",
+    image: "/hero/hero2.png",
     position: "50% 48%",
   },
   {
     word: "DARING",
-    image: "/hero/scene-3.jpg",
+    image: "/hero/hero3.png",
     position: "50% 50%",
   },
   {
-    word: "BOLD",
-    image: "/hero/scene-4.jpg",
+    word: "ACHIEVERS",
+    image: "/hero/hero4.png",
     position: "50% 50%",
   },
   {
-    word: "CREATORS",
-    image: "/hero/scene-5.jpg",
+    word: "INNOVATORS",
+    image: "/hero/hero5.png",
     position: "50% 50%",
   },
 ];
