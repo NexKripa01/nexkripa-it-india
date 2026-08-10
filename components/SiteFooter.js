@@ -30,7 +30,7 @@ export default function SiteFooter() {
           <p>
             NexKripa IT INDIA
             <br />
-            Andheri (W), Mumbai - 400066
+            Andheri (W), Mumbai - 400058
           </p>
         </div>
 
@@ -48,11 +48,33 @@ export default function SiteFooter() {
       </div>
 
       <div className="ref-footer-social">
-        <a href="#" aria-label="Facebook">f</a>
-        <a href="#" aria-label="Instagram">◎</a>
-        <a href="#" aria-label="LinkedIn">in</a>
-        <a href="#" aria-label="YouTube">▶</a>
-      </div>
+  <a
+    href="https://www.instagram.com/nexkripa/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+  >
+    ◎
+  </a>
+
+  <a
+    href="https://www.linkedin.com/company/137494032/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+  >
+    in
+  </a>
+
+  <a
+    href="https://github.com/NexKripa01"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="GitHub"
+  >
+    Git
+  </a>
+</div>
 
       <div className="ref-footer-bottom">
         <p>
