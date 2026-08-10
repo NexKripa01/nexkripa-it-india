@@ -9,24 +9,24 @@ const projects = [
     href: "https://www.pujadham.co.in/",
     external: true,
   },
-  {
-    title: "NexKripa IT INDIA",
-    category: "Brand Experience",
-    image: "/portfolio/nexkripa.jpg",
-    href: "/",
-  },
-  {
-    title: "AI Flow",
-    category: "AI Automation",
-    image: "/portfolio/ai-flow.jpg",
-    href: "/contact",
-  },
-  {
-    title: "EduCore",
-    category: "Education Website",
-    image: "/portfolio/educore.jpg",
-    href: "/contact",
-  },
+  // {
+  //   title: "NexKripa IT INDIA",
+  //   category: "Brand Experience",
+  //   image: "/portfolio/nexkripa.jpg",
+  //   href: "/",
+  // },
+  // {
+  //   title: "AI Flow",
+  //   category: "AI Automation",
+  //   image: "/portfolio/ai-flow.jpg",
+  //   href: "/contact",
+  // },
+  // {
+  //   title: "EduCore",
+  //   category: "Education Website",
+  //   image: "/portfolio/educore.jpg",
+  //   href: "/contact",
+  // },
   {
     title: "ShopGrid",
     category: "E-Commerce",
