@@ -3,6 +3,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaGithub,
+} from "react-icons/fa6";
+
 const quickLinks = [
   ["Contact Us", "/contact"],
   ["Services", "/services"],
@@ -17,16 +23,25 @@ export default function SiteFooter() {
   if (pathname === "/") return null;
 
   return (
-    <footer className="ref-site-footer">
-      <div className="ref-footer-grid">
-        <div className="ref-footer-block">
-          <h3>START A PROJECT</h3>
-          <p>Write to Us</p>
-          <a href="mailto:hello@nexkripa.com">nexkripa@gmail.com</a>
+    <footer className="ref-footer">
+
+      <div className="ref-footer-top">
+
+        {/* START PROJECT */}
+        <div className="ref-footer-project">
+          <p>START A PROJECT</p>
+
+          <h2>Write to Us</h2>
+
+          <a href="mailto:nexkripa@gmail.com">
+            nexkripa@gmail.com
+          </a>
         </div>
 
+        {/* ADDRESS */}
         <div className="ref-footer-block">
           <h3>ADDRESS</h3>
+
           <p>
             NexKripa IT INDIA
             <br />
@@ -34,6 +49,7 @@ export default function SiteFooter() {
           </p>
         </div>
 
+        {/* QUICK LINKS */}
         <div className="ref-footer-block ref-footer-links-block">
           <h3>QUICK LINKS</h3>
 
@@ -45,54 +61,58 @@ export default function SiteFooter() {
             ))}
           </div>
         </div>
+
       </div>
 
+
+      {/* SOCIAL MEDIA */}
       <div className="ref-footer-social">
-  <a
-    href="https://www.instagram.com/nexkripa/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-  >
-    ◎
-  </a>
 
-  <a
-    href="https://www.linkedin.com/company/137494032/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-  >
-    in
-  </a>
+        <a
+          href="https://www.instagram.com/nexkripa/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </a>
 
-  <a
-    href="https://github.com/NexKripa01"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="GitHub"
-  >
-    Git
-  </a>
-  <a
-  href="https://www.youtube.com/channel/UCvTDbvm8VChxX74ryoZeSbg"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="YouTube"
->
-  ▶
-</a>
-</div>
+        <a
+          href="https://www.linkedin.com/company/137494032/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedinIn />
+        </a>
 
+        <a
+          href="https://github.com/NexKripa01"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <FaGithub />
+        </a>
+
+      </div>
+
+
+      {/* FOOTER BOTTOM */}
       <div className="ref-footer-bottom">
+
         <p>
           Copyright © 2026 NexKripa IT INDIA. All Rights Reserved.
         </p>
 
         <div>
-          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/privacy-policy">
+            Privacy Policy
+          </Link>
         </div>
+
       </div>
+
     </footer>
   );
 }

@@ -156,18 +156,6 @@ export default function PortfolioPage() {
             </div>
           </Reveal>
 
-          <div className="pf-page-navigation">
-            <Link href="/">
-              <span>←</span> HOME
-            </Link>
-
-            <div className="pf-page-nav-line" />
-
-            <Link href="/services">
-              SERVICES <span>→</span>
-            </Link>
-          </div>
-
         </div>
       </section>
     </>
