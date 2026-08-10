@@ -2780,39 +2780,51 @@ main{position:relative;z-index:1}
 }
 
 /* =========================================================
-   CLIENTELE / CLIENT'S TALES — REFERENCE STYLE
+   CLIENTELE / CLIENT'S TALES — FINAL
+   Contact-page matched spacing + responsive cards
+   Single source of truth for .client-tales-* classes
    ========================================================= */
 
 .client-tales-page{
+  position:relative;
+  width:100%;
   min-height:100vh;
+  padding:145px max(6vw,calc((100% - 1450px)/2)) 80px;
   background:
     radial-gradient(circle at 80% 18%,rgba(255,61,97,.06),transparent 24%),
     #07090b;
   color:#fff;
-  padding:145px max(6vw,calc((100% - 1450px)/2)) 85px;
+  overflow:hidden;
 }
 
 .client-tales-inner{
-  width:100%;
+  width:min(1180px,100%);
+  margin:0 auto;
 }
 
 .client-tales-heading{
+  width:100%;
+  margin:0;
+  padding:25px 0 75px;
   text-align:center;
-  padding:24px 0 72px;
 }
 
 .client-tales-heading h1{
   margin:0;
+  color:#fff;
   font-family:'Manrope',sans-serif;
-  font-size:clamp(38px,4vw,62px);
+  font-size:clamp(40px,4.5vw,70px);
   font-weight:800;
-  letter-spacing:-.035em;
+  line-height:1;
+  letter-spacing:-.04em;
 }
 
 .client-tales-heading p{
   margin:30px 0 0;
-  font-size:clamp(15px,1.5vw,22px);
+  color:#fff;
+  font-size:clamp(16px,1.5vw,22px);
   font-weight:700;
+  line-height:1.45;
 }
 
 .client-tales-heading strong{
@@ -2820,21 +2832,37 @@ main{position:relative;z-index:1}
 }
 
 .client-tales-grid{
+  width:100%;
+  margin:0 auto;
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:34px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  align-items:stretch;
+}
+
+/* Reveal wrappers must fill each grid cell */
+.client-tales-grid > *{
+  width:100%;
+  min-width:0;
+  height:100%;
 }
 
 .client-tale-card{
+  position:relative;
+  width:100%;
+  height:100%;
   min-height:520px;
-  background:
-    linear-gradient(180deg,rgba(32,48,70,.94),rgba(19,31,48,.96));
-  padding:42px 34px 34px;
+  padding:38px 32px 32px;
   display:flex;
   flex-direction:column;
   align-items:center;
   text-align:center;
-  border:1px solid rgba(255,255,255,.045);
+  text-decoration:none;
+  color:#fff;
+  background:
+    linear-gradient(180deg,rgba(32,48,70,.96),rgba(19,31,48,.98));
+  border:1px solid rgba(255,255,255,.06);
+  overflow:hidden;
   transition:
     transform .35s ease,
     background .35s ease,
@@ -2842,39 +2870,42 @@ main{position:relative;z-index:1}
 }
 
 .client-tale-card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(255,61,97,.28);
+  transform:translateY(-6px);
+  border-color:rgba(255,61,97,.3);
   background:
     linear-gradient(180deg,rgba(38,55,79,.98),rgba(18,30,47,.98));
 }
 
 .client-tale-visual{
-  width:250px;
-  height:220px;
   position:relative;
+  width:230px;
+  height:200px;
+  margin:0 auto 22px;
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-bottom:24px;
+  flex:0 0 auto;
 }
 
 .client-tale-quote{
   position:absolute;
+  z-index:2;
   left:0;
-  top:-5px;
+  top:-7px;
+  color:#fff;
   font-family:Georgia,'Times New Roman',serif;
-  font-size:110px;
+  font-size:96px;
   line-height:1;
-  color:#edf0df;
 }
 
 .client-tale-avatar{
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  overflow:hidden;
+  width:165px;
+  height:165px;
+  flex:0 0 165px;
   display:grid;
   place-items:center;
+  overflow:hidden;
+  border-radius:50%;
   background:
     radial-gradient(circle at 35% 30%,#677f98,transparent 34%),
     linear-gradient(145deg,#273e58,#18283c);
@@ -2882,76 +2913,120 @@ main{position:relative;z-index:1}
   box-shadow:0 20px 45px rgba(0,0,0,.18);
 }
 
+.client-tale-image{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
 .client-tale-avatar span{
+  color:rgba(255,255,255,.88);
   font-family:'Manrope',sans-serif;
-  font-size:56px;
+  font-size:52px;
   font-weight:800;
-  letter-spacing:-.06em;
-  color:rgba(255,255,255,.8);
+  line-height:1;
+  letter-spacing:-.05em;
 }
 
 .client-tale-copy{
+  width:100%;
+  max-width:390px;
   margin:0 auto;
-  max-width:360px;
   color:#e1e6ea;
   font-size:15px;
   line-height:1.7;
 }
 
 .client-tale-meta{
+  width:100%;
   margin-top:auto;
-  padding-top:30px;
+  padding-top:28px;
 }
 
 .client-tale-meta h2{
   margin:0 0 9px;
+  color:#fff;
   font-family:'Manrope',sans-serif;
   font-size:21px;
   font-weight:800;
-  letter-spacing:.02em;
+  line-height:1.12;
+  letter-spacing:-.02em;
 }
 
 .client-tale-meta span{
   color:#c6cbd0;
-  font-size:13px;
+  font-size:12px;
+  line-height:1.4;
+  letter-spacing:.08em;
   text-transform:uppercase;
-  letter-spacing:.05em;
 }
 
-@media (max-width:1050px){
-  .client-tales-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+.client-tale-cta-card{
+  cursor:pointer;
 }
 
-@media (max-width:820px){
+.client-tale-cta-card .client-tale-avatar span{
+  color:#fff;
+  font-size:56px;
+  font-weight:600;
+}
+
+/* TABLET */
+@media (max-width:900px){
   .client-tales-page{
     padding:120px 24px 70px;
   }
 
   .client-tales-heading{
-    padding-bottom:58px;
+    padding:25px 0 60px;
+  }
+
+  .client-tales-grid{
+    gap:20px;
   }
 
   .client-tale-card{
     min-height:500px;
+    padding:34px 24px 28px;
+  }
+
+  .client-tale-visual{
+    width:210px;
+    height:190px;
+  }
+
+  .client-tale-avatar{
+    width:155px;
+    height:155px;
+    flex-basis:155px;
   }
 }
 
-@media (max-width:560px){
+/* MOBILE — mirrors Contact page top spacing */
+@media (max-width:600px){
   .client-tales-page{
     padding:105px 16px 55px;
+    overflow:hidden;
+  }
+
+  .client-tales-inner{
+    width:100%;
   }
 
   .client-tales-heading{
-    padding:18px 0 50px;
+    padding:18px 0 52px;
   }
 
   .client-tales-heading h1{
     font-size:36px;
+    line-height:1;
+    letter-spacing:-.035em;
   }
 
   .client-tales-heading p{
+    margin-top:30px;
     font-size:17px;
     line-height:1.45;
   }
@@ -2962,41 +3037,67 @@ main{position:relative;z-index:1}
   }
 
   .client-tale-card{
-    min-height:475px;
-    padding:34px 24px 30px;
+    min-height:0;
+    height:auto;
+    padding:30px 20px 26px;
   }
 
   .client-tale-visual{
-    width:220px;
-    height:205px;
+    width:190px;
+    height:165px;
+    margin-bottom:20px;
   }
 
   .client-tale-avatar{
-    width:165px;
-    height:165px;
+    width:135px;
+    height:135px;
+    flex-basis:135px;
   }
 
   .client-tale-quote{
-    font-size:95px;
+    left:2px;
+    top:-4px;
+    font-size:78px;
   }
 
   .client-tale-copy{
-    font-size:14px;
+    max-width:305px;
+    font-size:13.5px;
+    line-height:1.65;
+  }
+
+  .client-tale-meta{
+    padding-top:24px;
   }
 
   .client-tale-meta h2{
     font-size:20px;
   }
-}
-/* CLIENT IMAGE SUPPORT */
-.client-tale-image{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-  object-position:center;
+
+  .client-tale-meta span{
+    font-size:11px;
+  }
+
+  .client-tale-cta-card .client-tale-avatar span{
+    font-size:48px;
+  }
 }
 
+@media (max-width:380px){
+  .client-tales-page{
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .client-tales-heading h1{
+    font-size:34px;
+  }
+
+  .client-tale-card{
+    padding-left:18px;
+    padding-right:18px;
+  }
+}
 
 /* =========================================================
    CURRENT NAVBAR — SINGLE SOURCE OF TRUTH
