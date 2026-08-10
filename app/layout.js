@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 
 export const metadata = {
-  metadataBase: new URL("https://www.nexkripa.com"),
+  metadataBase: new URL("https://www.nexkripa.in"),
 
   title: {
     default: "NexKripa IT INDIA | Web Development, AI & Digital Solutions",
@@ -43,17 +43,13 @@ export const metadata = {
 
   category: "Technology",
 
-  alternates: {
-    canonical: "/",
-  },
-
   openGraph: {
     title: "NexKripa IT INDIA | Web Development, AI & Digital Solutions",
 
     description:
       "Modern websites, AI automation, CRM, branding, UI/UX, e-commerce and IT solutions for businesses and startups.",
 
-    url: "https://www.nexkripa.com",
+    url: "https://www.nexkripa.in",
 
     siteName: "NexKripa IT INDIA",
 
@@ -78,7 +74,7 @@ export const metadata = {
     description:
       "Web development, AI automation, branding, CRM, UI/UX and digital solutions for modern businesses.",
 
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
 
   robots: {
