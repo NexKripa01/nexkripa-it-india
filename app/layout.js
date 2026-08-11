@@ -97,8 +97,7 @@ export const metadata = {
   },
 
   verification: {
-    // Google Search Console verification code baad me add karna.
-    // google: "your-google-verification-code",
+    google: "L8KG7MNfxWhOLc0-VFlkRUYyXNPdrG0uG8Dn7Qvl02Q",
   },
 };
 

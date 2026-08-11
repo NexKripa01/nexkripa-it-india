@@ -40,9 +40,9 @@ export default function SiteFooter() {
             aria-label="NexKripa IT INDIA Home"
           >
             <Image
-              src="/n-logo.png"
+              src="/new-logo.png"
               alt="NexKripa IT INDIA Logo"
-              width={170}
+              width={125}
               height={60}
               className="ref-footer-logo-image"
             />

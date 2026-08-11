@@ -1,7 +1,9 @@
 import ContactWizard from "@/components/ContactWizard";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 export const metadata = {
   title: "Contact",
+
   description:
     "Start a project with NexKripa IT INDIA for web, design, branding and AI solutions.",
 
@@ -15,6 +17,7 @@ export default function ContactPage() {
     <>
       <section className="ref-contact-page">
         <div className="ref-contact-inner">
+
           <div className="ref-contact-title">
             <h1>START A PROJECT</h1>
 
@@ -25,8 +28,11 @@ export default function ContactPage() {
           </div>
 
           <ContactWizard />
+
         </div>
       </section>
+
+      <WhatsAppFloat />
     </>
   );
 }

@@ -161,7 +161,7 @@ export default function Navbar() {
             aria-label="NexKripa IT INDIA Home"
           >
             <Image
-              src="/n-logo.png"
+              src="/new-logo.png"
               alt="NexKripa logo"
               width={72}
               height={72}
@@ -169,7 +169,7 @@ export default function Navbar() {
               className="ref-nav-symbol"
             />
 
-            <span className="ref-nav-wordmark">
+            {/* <span className="ref-nav-wordmark">
               <strong>NexKripa</strong>
 
               <span className="ref-nav-subtitle">
@@ -177,7 +177,7 @@ export default function Navbar() {
                 IT INDIA
                 <i />
               </span>
-            </span>
+            </span> */}
           </Link>
 
           {/* HAMBURGER */}
