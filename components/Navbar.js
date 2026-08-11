@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,7 +15,12 @@ const menuItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [navbarVisible, setNavbarVisible] = useState(true);
+
   const pathname = usePathname();
+
+  const lastScrollY = useRef(0);
+  const hideTimer = useRef(null);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -25,8 +30,106 @@ export default function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    const isMobile = () => window.innerWidth <= 600;
+
+    const clearHideTimer = () => {
+      if (hideTimer.current) {
+        window.clearTimeout(hideTimer.current);
+        hideTimer.current = null;
+      }
+    };
+
+    const startHideTimer = () => {
+      clearHideTimer();
+
+      if (!isMobile()) return;
+
+      if (window.scrollY <= 30) return;
+
+      if (open) return;
+
+      hideTimer.current = window.setTimeout(() => {
+        setNavbarVisible(false);
+      }, 2000);
+    };
+
+    const handleScroll = () => {
+      if (!isMobile()) {
+        setNavbarVisible(true);
+        return;
+      }
+
+      const currentScrollY = window.scrollY;
+      const previousScrollY = lastScrollY.current;
+
+      clearHideTimer();
+
+      // Top of page
+      if (currentScrollY <= 30) {
+        setNavbarVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      // Menu open hai to navbar always visible
+      if (open) {
+        setNavbarVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      // User scrolls UP
+      if (currentScrollY < previousScrollY) {
+        setNavbarVisible(true);
+      }
+
+      // User scrolls DOWN
+      if (currentScrollY > previousScrollY) {
+        setNavbarVisible(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+
+      // User rukne ke 2 sec baad hide
+      startHideTimer();
+    };
+
+    const handleResize = () => {
+      if (!isMobile()) {
+        clearHideTimer();
+        setNavbarVisible(true);
+      }
+    };
+
+    lastScrollY.current = window.scrollY;
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    window.addEventListener("resize", handleResize);
+
+    if (isMobile() && window.scrollY > 30) {
+      startHideTimer();
+    }
+
+    return () => {
+      clearHideTimer();
+
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [open]);
+
   const closeMenu = () => {
     setOpen(false);
+    setNavbarVisible(true);
+  };
+
+  const toggleMenu = () => {
+    setNavbarVisible(true);
+    setOpen((value) => !value);
   };
 
   const checkActive = (href) => {
@@ -43,7 +146,11 @@ export default function Navbar() {
   return (
     <>
       {/* NAVBAR */}
-      <header className="ref-navbar">
+      <header
+        className={`ref-navbar ${
+          navbarVisible ? "nav-visible" : "nav-hidden"
+        } ${open ? "menu-open" : ""}`}
+      >
         <div className="ref-navbar-inner">
 
           {/* BRAND */}
@@ -63,7 +170,7 @@ export default function Navbar() {
             />
 
             <span className="ref-nav-wordmark">
-              <strong>exKripa</strong>
+              <strong>NexKripa</strong>
 
               <span className="ref-nav-subtitle">
                 <i />
@@ -81,7 +188,7 @@ export default function Navbar() {
             }`}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
-            onClick={() => setOpen((value) => !value)}
+            onClick={toggleMenu}
           >
             <span className="ref-ham-top" />
             <span className="ref-ham-middle" />

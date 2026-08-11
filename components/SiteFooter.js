@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import {
   FaInstagram,
   FaLinkedinIn,
   FaGithub,
+  FaYoutube,
 } from "react-icons/fa6";
 
 const quickLinks = [
@@ -20,15 +22,32 @@ const quickLinks = [
 export default function SiteFooter() {
   const pathname = usePathname();
 
+  // Home page par footer hide rahega
   if (pathname === "/") return null;
 
   return (
     <footer className="ref-footer">
 
+      {/* FOOTER TOP */}
       <div className="ref-footer-top">
 
-        {/* START PROJECT */}
+        {/* LOGO + START PROJECT */}
         <div className="ref-footer-project">
+
+          <Link
+            href="/"
+            className="ref-footer-logo"
+            aria-label="NexKripa IT INDIA Home"
+          >
+            <Image
+              src="/n-logo.png"
+              alt="NexKripa IT INDIA Logo"
+              width={170}
+              height={60}
+              className="ref-footer-logo-image"
+            />
+          </Link>
+
           <p>START A PROJECT</p>
 
           <h2>Write to Us</h2>
@@ -64,39 +83,50 @@ export default function SiteFooter() {
 
       </div>
 
-
       {/* SOCIAL MEDIA */}
       <div className="ref-footer-social">
 
+        {/* Instagram */}
         <a
           href="https://www.instagram.com/nexkripa/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Instagram"
+          aria-label="NexKripa Instagram"
         >
           <FaInstagram />
         </a>
 
+        {/* LinkedIn */}
         <a
           href="https://www.linkedin.com/company/137494032/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn"
+          aria-label="NexKripa LinkedIn"
         >
           <FaLinkedinIn />
         </a>
 
+        {/* GitHub */}
         <a
           href="https://github.com/NexKripa01"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub"
+          aria-label="NexKripa GitHub"
         >
           <FaGithub />
         </a>
 
-      </div>
+        {/* YouTube */}
+        <a
+          href="https://youtube.com/@nexkripaitindia?si=D2UFGY-VRipIfZw6"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="NexKripa YouTube"
+        >
+          <FaYoutube />
+        </a>
 
+      </div>
 
       {/* FOOTER BOTTOM */}
       <div className="ref-footer-bottom">

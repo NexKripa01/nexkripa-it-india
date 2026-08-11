@@ -13006,3 +13006,102 @@ main{position:relative;z-index:1}
     padding-right: 14px;
   }
 }
+
+.ref-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.ref-footer-logo-image {
+  width: 170px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ================================
+   HOME HERO - MOBILE FULL IMAGE
+================================ */
+
+@media (max-width: 768px) {
+  .reference-home-hero {
+    background: #000;
+  }
+
+  .reference-main-slide,
+  .liquid-layer {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+/* =========================================================
+   MOBILE SMART SCROLL NAVBAR
+   - Scroll up   = show
+   - Scroll down = hide
+   - Stop 2 sec  = hide
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .ref-navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+
+    transform: translateY(0);
+    opacity: 1;
+
+    transition:
+      transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.28s ease,
+      background 0.3s ease,
+      backdrop-filter 0.3s ease !important;
+
+    will-change: transform;
+
+    z-index: 120 !important;
+  }
+
+  /* User scrolls upward */
+  .ref-navbar.nav-visible {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+
+    background: rgba(7, 9, 11, 0.72) !important;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom:
+      1px solid
+      rgba(255, 255, 255, 0.06);
+  }
+
+  /* Down scroll / stopped for 2 sec */
+  .ref-navbar.nav-hidden {
+    transform: translateY(-110%) !important;
+    opacity: 0 !important;
+
+    pointer-events: none;
+  }
+
+  /* Menu open hone par navbar kabhi hide nahi hoga */
+  .ref-navbar.menu-open {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+
+    pointer-events: auto !important;
+
+    background: transparent !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    border-bottom: 0 !important;
+  }
+}

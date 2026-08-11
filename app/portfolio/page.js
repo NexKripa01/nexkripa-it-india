@@ -141,21 +141,6 @@ export default function PortfolioPage() {
             </Link>
           </div>
 
-          <Reveal>
-            <div className="pf-excellence">
-              <h3>
-                EXPECT NOTHING BUT EXCELLENCE
-              </h3>
-
-              <Link
-                href="/about"
-                className="pf-outline-btn"
-              >
-                KNOW MORE
-              </Link>
-            </div>
-          </Reveal>
-
         </div>
       </section>
     </>
