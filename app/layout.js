@@ -14,8 +14,9 @@ export const metadata = {
     "NexKripa IT INDIA provides web development, UI/UX design, AI automation, CRM, branding, e-commerce, database maintenance and IT consultancy services for businesses and startups.",
 
   keywords: [
-    "NexKripa IT INDIA",
     "NexKripa",
+    "NexKripa IT INDIA",
+    "NexKripa India",
     "Web Development Company India",
     "Web Development Mumbai",
     "AI Automation Services",
@@ -27,60 +28,47 @@ export const metadata = {
     "Database Maintenance",
     "IT Consultancy",
     "Digital Solutions India",
-    "Website Development India",
   ],
 
-  authors: [
-    {
-      name: "NexKripa IT INDIA",
-    },
-  ],
-
+  authors: [{ name: "NexKripa IT INDIA" }],
   creator: "NexKripa IT INDIA",
   publisher: "NexKripa IT INDIA",
-
-  applicationName: "NexKripa IT INDIA",
-
+  applicationName: "NexKripa",
   category: "Technology",
+
+  alternates: {
+    canonical: "/",
+  },
 
   openGraph: {
     title: "NexKripa IT INDIA | Web Development, AI & Digital Solutions",
-
     description:
       "Modern websites, AI automation, CRM, branding, UI/UX, e-commerce and IT solutions for businesses and startups.",
-
     url: "https://www.nexkripa.in",
-
-    siteName: "NexKripa IT INDIA",
-
+    siteName: "NexKripa",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "NexKripa IT INDIA - Digital and Technology Solutions",
+        alt: "NexKripa IT INDIA",
       },
     ],
-
     locale: "en_IN",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-
     title: "NexKripa IT INDIA | Web Development, AI & Digital Solutions",
-
     description:
-      "Web development, AI automation, branding, CRM, UI/UX and digital solutions for modern businesses.",
-
+      "Web development, AI automation, branding, CRM, UI/UX and digital solutions.",
     images: ["/og-image.png"],
   },
 
   robots: {
     index: true,
     follow: true,
-
     googleBot: {
       index: true,
       follow: true,
@@ -91,7 +79,16 @@ export const metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      {
+        url: "/favicon.ico",
+      },
+      {
+        url: "/icon.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
     shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
@@ -101,10 +98,51 @@ export const metadata = {
   },
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "NexKripa",
+  alternateName: [
+    "NexKripa IT INDIA",
+    "NexKripa India",
+    "nexkripa.in",
+  ],
+  url: "https://www.nexkripa.in/",
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "NexKripa IT INDIA",
+  alternateName: "NexKripa",
+  url: "https://www.nexkripa.in/",
+  logo: "https://www.nexkripa.in/icon.png",
+  sameAs: [
+    "https://www.instagram.com/nexkripa/",
+    "https://www.linkedin.com/company/137494032/",
+    "https://github.com/NexKripa01",
+    "https://youtube.com/@nexkripaitindia",
+  ],
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN" data-scroll-behavior="smooth">
+    <html lang="en-IN">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+
         <Navbar />
 
         <main>{children}</main>

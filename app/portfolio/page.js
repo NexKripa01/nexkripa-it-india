@@ -134,10 +134,10 @@ export default function PortfolioPage() {
 
           <div className="pf-all-websites-row">
             <Link
-              href="/portfolio"
+              href="/services"
               className="pf-outline-btn"
             >
-              ALL WEBSITES
+            EXPLORE SERVICES
             </Link>
           </div>
 

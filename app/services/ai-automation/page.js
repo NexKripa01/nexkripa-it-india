@@ -2,43 +2,137 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata = {
-  title: "AI Automation",
+  title: "AI Automation Services in Mumbai",
+
   description:
-    "AI automation services by NexKripa IT INDIA for workflow automation, intelligent assistants, integrations and repetitive task reduction.",
+    "NexKripa IT INDIA provides AI automation services in Mumbai and across India for workflow automation, AI assistants, API integrations, data extraction and automated reporting.",
+
+  keywords: [
+    "AI Automation Services Mumbai",
+    "AI Automation Company Mumbai",
+    "Workflow Automation Services India",
+    "Business Process Automation",
+    "AI Assistants for Business",
+    "API Integration Services",
+    "Automated Reporting Solutions",
+    "Data Extraction Automation",
+    "Business Automation India",
+    "AI Workflow Automation",
+    "NexKripa AI Automation",
+    "NexKripa IT INDIA",
+  ],
 
   alternates: {
     canonical: "/services/ai-automation",
   },
+
+  openGraph: {
+    title: "AI Automation Services in Mumbai | NexKripa IT INDIA",
+    description:
+      "AI-powered workflow automation, assistants, integrations and reporting solutions for modern businesses.",
+    url: "/services/ai-automation",
+    siteName: "NexKripa",
+    type: "website",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "NexKripa IT INDIA AI Automation Services",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Automation Services in Mumbai | NexKripa IT INDIA",
+    description:
+      "AI workflow automation, assistants and integrations for businesses.",
+    images: ["/og-image.png"],
+  },
 };
 
 const capabilities = [
-  ["01", "WORKFLOW AUTOMATION", "Automate repetitive multi-step processes so teams spend less time on manual handoffs and routine updates."],
-  ["02", "AI ASSISTANTS", "Build focused assistants that can help with internal knowledge, support, lead handling and common operational tasks."],
-  ["03", "SMART FORMS", "Use intelligent forms and routing logic to collect better information and send it to the right workflow automatically."],
-  ["04", "DATA EXTRACTION", "Turn documents, emails and structured inputs into usable business data with less manual copy-paste work."],
-  ["05", "API INTEGRATION", "Connect tools, databases and services so information can move between systems more reliably."],
-  ["06", "AUTOMATED REPORTING", "Generate summaries, updates and recurring reports from the data your business already creates."],
+  [
+    "01",
+    "WORKFLOW AUTOMATION",
+    "Automate repetitive multi-step processes so teams spend less time on manual handoffs and routine updates.",
+  ],
+  [
+    "02",
+    "AI ASSISTANTS",
+    "Build focused AI assistants that can help with internal knowledge, support, lead handling and common operational tasks.",
+  ],
+  [
+    "03",
+    "SMART FORMS",
+    "Use intelligent forms and routing logic to collect better information and send it to the right workflow automatically.",
+  ],
+  [
+    "04",
+    "DATA EXTRACTION",
+    "Turn documents, emails and structured inputs into usable business data with less manual copy-paste work.",
+  ],
+  [
+    "05",
+    "API INTEGRATION",
+    "Connect tools, databases and services so information can move between systems more reliably.",
+  ],
+  [
+    "06",
+    "AUTOMATED REPORTING",
+    "Generate summaries, updates and recurring reports from the data your business already creates.",
+  ],
 ];
 
 const process = [
-  ["01", "IDENTIFY", "We find repetitive, rules-based or time-consuming tasks that are strong candidates for automation."],
-  ["02", "MAP", "We document the current workflow, data sources, decision points and the people or systems involved."],
-  ["03", "DESIGN", "We define the automation logic, fallbacks, approvals and human checkpoints before implementation."],
-  ["04", "BUILD", "We connect the required services, APIs, data sources and AI components into a working workflow."],
-  ["05", "TEST", "We test real scenarios, edge cases and failure paths so automation remains useful instead of becoming fragile."],
-  ["06", "IMPROVE", "We review performance and refine prompts, rules, integrations or steps as the workflow evolves."],
+  [
+    "01",
+    "IDENTIFY",
+    "We find repetitive, rules-based or time-consuming tasks that are strong candidates for automation.",
+  ],
+  [
+    "02",
+    "MAP",
+    "We document the current workflow, data sources, decision points and the people or systems involved.",
+  ],
+  [
+    "03",
+    "DESIGN",
+    "We define the automation logic, fallbacks, approvals and human checkpoints before implementation.",
+  ],
+  [
+    "04",
+    "BUILD",
+    "We connect the required services, APIs, data sources and AI components into a working workflow.",
+  ],
+  [
+    "05",
+    "TEST",
+    "We test real scenarios, edge cases and failure paths so automation remains useful instead of becoming fragile.",
+  ],
+  [
+    "06",
+    "IMPROVE",
+    "We review performance and refine prompts, rules, integrations or steps as the workflow evolves.",
+  ],
 ];
 
 export default function AIAutomationPage() {
   return (
     <main className="ai-page">
+
+      {/* HERO */}
       <section className="ai-hero">
-        <div className="ai-hero-bg" />
-        <div className="ai-hero-overlay" />
+        <div className="ai-hero-bg" aria-hidden="true" />
+        <div className="ai-hero-overlay" aria-hidden="true" />
 
         <div className="ai-container ai-hero-inner">
           <Reveal>
-            <span className="ai-kicker">SERVICES / AI AUTOMATION</span>
+            <span className="ai-kicker">
+              AI AUTOMATION SERVICES / MUMBAI
+            </span>
           </Reveal>
 
           <Reveal delay={0.06}>
@@ -52,9 +146,9 @@ export default function AIAutomationPage() {
           <Reveal delay={0.12}>
             <div className="ai-hero-bottom">
               <p>
-                We design AI-assisted workflows that reduce repetitive work,
-                connect systems and help teams move information and tasks
-                forward with less manual effort.
+                NexKripa IT INDIA provides AI automation services in Mumbai
+                and across India for businesses that want to reduce repetitive
+                work, connect systems and improve everyday operations.
               </p>
 
               <Link href="/contact" className="ai-btn">
@@ -65,10 +159,13 @@ export default function AIAutomationPage() {
         </div>
       </section>
 
+      {/* INTRO */}
       <section className="ai-intro">
         <div className="ai-container">
           <Reveal>
-            <span className="ai-kicker">AUTOMATION WITH PURPOSE</span>
+            <span className="ai-kicker">
+              BUSINESS PROCESS AUTOMATION
+            </span>
           </Reveal>
 
           <div className="ai-intro-grid">
@@ -83,16 +180,26 @@ export default function AIAutomationPage() {
             <div className="ai-intro-copy">
               <Reveal delay={0.1}>
                 <p className="ai-lead">
-                  The best automation is not the one with the most AI. It is the
-                  one that removes a real bottleneck without creating a new one.
+                  The best automation is not the one with the most AI. It is
+                  the one that removes a real bottleneck without creating a
+                  new one.
                 </p>
               </Reveal>
 
               <Reveal delay={0.16}>
                 <p>
-                  We start with the workflow, then decide where rules,
-                  integrations or AI can make the process faster, more
-                  consistent and easier for your team to manage.
+                  We start with your existing workflow, then decide where
+                  business rules, integrations or AI can make the process
+                  faster, more consistent and easier for your team to manage.
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.2}>
+                <p>
+                  Our AI automation solutions can support lead handling,
+                  reporting, document processing, internal workflows,
+                  customer communication and other repetitive business
+                  operations.
                 </p>
               </Reveal>
             </div>
@@ -100,12 +207,23 @@ export default function AIAutomationPage() {
         </div>
       </section>
 
-      <section className="ai-showcase">
-        <div className="ai-showcase-image" />
+      {/* SHOWCASE */}
+      <section
+        className="ai-showcase"
+        aria-label="AI automation workflow showcase"
+      >
+        <div
+          className="ai-showcase-image"
+          role="img"
+          aria-label="AI workflow automation and system integration by NexKripa IT INDIA"
+        />
 
         <div className="ai-showcase-copy">
           <Reveal>
-            <span className="ai-kicker">CONNECTED WORKFLOWS</span>
+            <span className="ai-kicker">
+              CONNECTED WORKFLOWS
+            </span>
+
             <h2>
               SYSTEMS THAT
               <br />
@@ -115,19 +233,23 @@ export default function AIAutomationPage() {
 
           <Reveal delay={0.08}>
             <p>
-              From enquiry routing and follow-ups to document processing and
-              reporting, we connect the steps that usually require someone to
-              copy, paste, check and repeat.
+              From enquiry routing and follow-ups to document processing,
+              data movement and automated reporting, we connect the steps that
+              usually require someone to copy, paste, check and repeat.
             </p>
           </Reveal>
         </div>
       </section>
 
+      {/* CAPABILITIES */}
       <section className="ai-capabilities">
         <div className="ai-container">
           <Reveal>
             <div className="ai-section-head">
-              <span className="ai-kicker">WHAT WE CAN AUTOMATE</span>
+              <span className="ai-kicker">
+                AI AUTOMATION CAPABILITIES
+              </span>
+
               <h2>
                 SMARTER
                 <br />
@@ -141,8 +263,11 @@ export default function AIAutomationPage() {
               <Reveal key={number} delay={index * 0.045}>
                 <article className="ai-card">
                   <span>{number}</span>
+
                   <div className="ai-line" />
+
                   <h3>{title}</h3>
+
                   <p>{text}</p>
                 </article>
               </Reveal>
@@ -151,11 +276,15 @@ export default function AIAutomationPage() {
         </div>
       </section>
 
+      {/* HUMAN + AUTOMATION */}
       <section className="ai-logic">
         <div className="ai-container ai-logic-grid">
           <Reveal>
             <div className="ai-logic-copy">
-              <span className="ai-kicker">HUMAN + AUTOMATION</span>
+              <span className="ai-kicker">
+                HUMAN + AI AUTOMATION
+              </span>
+
               <h2>
                 AUTOMATE THE
                 <br />
@@ -163,24 +292,33 @@ export default function AIAutomationPage() {
               </h2>
 
               <p>
-                Not every decision should be automated. We can design approval
-                points, alerts and human review into the workflow so the system
-                stays practical and accountable.
+                Not every business decision should be fully automated. We can
+                design approval points, alerts and human review into the
+                workflow so the system remains practical, controlled and
+                accountable.
               </p>
             </div>
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="ai-logic-image" />
+            <div
+              className="ai-logic-image"
+              role="img"
+              aria-label="Human controlled AI automation workflow"
+            />
           </Reveal>
         </div>
       </section>
 
+      {/* PROCESS */}
       <section className="ai-process">
         <div className="ai-container">
           <Reveal>
             <div className="ai-section-head">
-              <span className="ai-kicker">OUR PROCESS</span>
+              <span className="ai-kicker">
+                OUR AI AUTOMATION PROCESS
+              </span>
+
               <h2>
                 FIND THE FRICTION.
                 <br />
@@ -194,8 +332,11 @@ export default function AIAutomationPage() {
               <Reveal key={number} delay={index * 0.04}>
                 <article className="ai-process-row">
                   <span className="ai-num">{number}</span>
+
                   <h3>{title}</h3>
+
                   <p>{text}</p>
+
                   <i />
                 </article>
               </Reveal>
@@ -204,10 +345,108 @@ export default function AIAutomationPage() {
         </div>
       </section>
 
+      {/* RELATED / INTERNAL LINKS */}
+      <section className="ai-related">
+        <div className="ai-container">
+          <Reveal>
+            <div className="ai-section-head">
+              <span className="ai-kicker">
+                EXPLORE MORE
+              </span>
+
+              <h2>
+                CONNECT AI WITH
+                <br />
+                <em>YOUR BUSINESS.</em>
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="ai-related-grid">
+
+            <Link
+              href="/services/crm"
+              className="ai-related-link"
+            >
+              <span>01</span>
+
+              <div>
+                <h3>CRM Development</h3>
+
+                <p>
+                  Connect customer data, lead management and operational
+                  workflows into a structured CRM system.
+                </p>
+              </div>
+
+              <b>↗</b>
+            </Link>
+
+            <Link
+              href="/services/database-maintenance"
+              className="ai-related-link"
+            >
+              <span>02</span>
+
+              <div>
+                <h3>Database Maintenance</h3>
+
+                <p>
+                  Keep the data behind your business systems organized,
+                  reliable and ready for connected workflows.
+                </p>
+              </div>
+
+              <b>↗</b>
+            </Link>
+
+            <Link
+              href="/services/website"
+              className="ai-related-link"
+            >
+              <span>03</span>
+
+              <div>
+                <h3>Web Development</h3>
+
+                <p>
+                  Integrate intelligent features and automated workflows into
+                  modern web experiences.
+                </p>
+              </div>
+
+              <b>↗</b>
+            </Link>
+
+            <Link
+              href="/contact"
+              className="ai-related-link"
+            >
+              <span>04</span>
+
+              <div>
+                <h3>Start an Automation Project</h3>
+
+                <p>
+                  Tell us which repetitive workflow or business process you
+                  want to improve.
+                </p>
+              </div>
+
+              <b>↗</b>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="ai-cta">
         <div className="ai-container">
           <Reveal>
-            <span className="ai-kicker">WHAT SHOULD YOUR TEAM STOP DOING MANUALLY?</span>
+            <span className="ai-kicker">
+              WHAT SHOULD YOUR TEAM STOP DOING MANUALLY?
+            </span>
 
             <h2>
               LET THE
@@ -223,6 +462,7 @@ export default function AIAutomationPage() {
           </Reveal>
         </div>
       </section>
+
     </main>
   );
 }

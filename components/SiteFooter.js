@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import {
   FaInstagram,
   FaLinkedinIn,
-  FaGithub,
+  FaGithub, 
   FaYoutube,
 } from "react-icons/fa6";
 
@@ -88,7 +88,7 @@ export default function SiteFooter() {
 
         {/* Instagram */}
         <a
-          href="https://www.instagram.com/nexkripa/"
+          href="https://www.instagram.com/nexkripa.in/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="NexKripa Instagram"

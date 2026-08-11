@@ -1,10 +1,31 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Privacy Policy",
+
   description:
-    "Privacy Policy for NexKripa IT INDIA explaining how personal information may be collected, used and protected.",
+    "Read the NexKripa IT INDIA Privacy Policy to understand how personal information may be collected, used, stored, shared and protected when you use our website or contact us.",
 
   alternates: {
     canonical: "/privacy-policy",
+  },
+
+  openGraph: {
+    title: "Privacy Policy | NexKripa IT INDIA",
+
+    description:
+      "Learn how NexKripa IT INDIA may collect, use and protect personal information submitted through our website and business enquiries.",
+
+    url: "/privacy-policy",
+
+    siteName: "NexKripa",
+
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -15,19 +36,22 @@ const sections = [
     content: (
       <>
         <p>
-          When you contact NexKripa IT INDIA, request a project, or submit a
-          form on our website, we may receive information such as your name,
-          email address, phone number, company or brand name, selected services,
-          and project details.
+          When you contact NexKripa IT INDIA, request information about a
+          service, discuss a project, or submit a form on our website, we may
+          receive information such as your name, email address, phone number,
+          company or brand name, selected services and project details.
         </p>
+
         <p>
-          We may also receive basic technical information such as browser type,
-          device type, pages visited, and general usage information when
-          analytics or similar website tools are enabled.
+          We may also receive limited technical information such as browser
+          type, device type, pages visited, referral information and general
+          website usage information when analytics or similar technologies are
+          enabled.
         </p>
       </>
     ),
   },
+
   {
     number: "02",
     title: "HOW WE USE INFORMATION",
@@ -35,71 +59,92 @@ const sections = [
       <>
         <p>
           Information submitted through our website may be used to respond to
-          enquiries, understand project requirements, prepare proposals, provide
-          requested services, improve our website, and communicate about an
-          existing or potential business relationship.
+          enquiries, understand project requirements, communicate with you,
+          prepare proposals, provide requested services and manage an existing
+          or potential business relationship.
         </p>
+
         <p>
-          We do not intend to use personal information for unrelated purposes
-          without an appropriate reason or permission where required.
+          We may also use relevant website usage information to understand how
+          our website performs and identify opportunities to improve its
+          usability, content and technical experience.
+        </p>
+
+        <p>
+          We do not intend to use personal information for purposes that are
+          unrelated to the reason it was collected without an appropriate
+          basis or permission where required.
         </p>
       </>
     ),
   },
+
   {
     number: "03",
     title: "COOKIES & ANALYTICS",
     content: (
       <>
         <p>
-          Our website may use cookies or analytics technologies to understand
-          website performance, traffic, and visitor interaction. These tools may
-          collect limited technical and usage information.
+          Our website may use cookies, analytics technologies or similar tools
+          to understand website performance, traffic and visitor interaction.
+          These technologies may collect limited technical and usage
+          information.
         </p>
+
         <p>
-          If optional analytics, advertising, or third-party tracking tools are
-          added in the future, this policy should be updated to identify them
-          and explain how they are used.
+          If additional analytics, advertising, remarketing or third-party
+          tracking technologies are introduced, this Privacy Policy may be
+          updated to provide information about those services and how they are
+          used.
         </p>
       </>
     ),
   },
+
   {
     number: "04",
     title: "SHARING OF INFORMATION",
     content: (
       <>
         <p>
-          We do not sell personal information. Information may be shared with
-          service providers or technology partners only where reasonably needed
-          to operate the website, communicate with you, deliver a requested
-          service, or meet legal obligations.
+          NexKripa IT INDIA does not sell personal information.
         </p>
+
         <p>
-          Third-party providers may have their own privacy practices, and their
-          services are governed by their respective terms and policies.
+          Information may be shared with service providers, hosting providers,
+          communication platforms or other technology partners where reasonably
+          necessary to operate the website, respond to you, deliver a requested
+          service or comply with applicable legal requirements.
+        </p>
+
+        <p>
+          Third-party providers may process information according to their own
+          privacy policies, terms and security practices.
         </p>
       </>
     ),
   },
+
   {
     number: "05",
     title: "DATA RETENTION",
     content: (
       <>
         <p>
-          We may keep enquiry and project information for as long as reasonably
-          necessary to respond to you, manage a business relationship, maintain
-          relevant records, or satisfy applicable legal and operational
-          requirements.
+          We may retain enquiry, communication and project-related information
+          for as long as reasonably necessary to respond to you, manage a
+          business relationship, maintain relevant business records or meet
+          applicable legal and operational requirements.
         </p>
+
         <p>
-          Information that is no longer reasonably required should be deleted or
-          anonymized where appropriate.
+          Where information is no longer reasonably required, we may delete,
+          anonymize or otherwise dispose of it as appropriate.
         </p>
       </>
     ),
   },
+
   {
     number: "06",
     title: "DATA SECURITY",
@@ -107,68 +152,121 @@ const sections = [
       <>
         <p>
           We aim to use reasonable technical and organizational safeguards to
-          protect information against unauthorized access, loss, misuse,
-          alteration, or disclosure.
+          help protect personal information against unauthorized access, loss,
+          misuse, alteration or disclosure.
         </p>
+
         <p>
-          No website, network, or electronic transmission can be guaranteed to
-          be completely secure, so users should avoid submitting unnecessary
-          sensitive information through general enquiry forms.
+          However, no website, network, storage system or electronic
+          transmission can be guaranteed to be completely secure. Users should
+          avoid submitting unnecessary sensitive or confidential information
+          through general enquiry forms.
         </p>
       </>
     ),
   },
+
   {
     number: "07",
-    title: "YOUR CHOICES & RIGHTS",
+    title: "YOUR PRIVACY RIGHTS & CHOICES",
     content: (
       <>
         <p>
-          Depending on applicable law and the circumstances, you may be able to
-          request information about personal data we hold about you, ask for
-          correction or deletion, withdraw consent where processing depends on
-          consent, or raise a privacy-related concern.
+          Depending on applicable law and the circumstances of the processing,
+          you may have rights or choices concerning personal information
+          relating to you.
         </p>
+
         <p>
-          To make a request, contact us using the details provided at the end of
-          this policy.
+          These may include requesting access to relevant information,
+          requesting correction or updating of information, requesting
+          deletion where applicable, withdrawing consent where processing is
+          based on consent, or raising a privacy-related grievance or concern.
+        </p>
+
+        <p>
+          Requests will be considered in accordance with applicable legal
+          requirements and the circumstances of the request.
         </p>
       </>
     ),
   },
+
   {
     number: "08",
-    title: "THIRD-PARTY LINKS",
+    title: "THIRD-PARTY SERVICES & LINKS",
     content: (
-      <p>
-        Our website may contain links to third-party websites or services.
-        NexKripa IT INDIA is not responsible for the privacy practices or
-        content of websites operated by other organizations. Please review their
-        privacy policies before providing personal information.
-      </p>
+      <>
+        <p>
+          Our website may contain links to third-party websites, platforms or
+          services.
+        </p>
+
+        <p>
+          NexKripa IT INDIA does not control the privacy practices, security or
+          content of websites operated by other organizations. Users should
+          review the relevant privacy policies before providing personal
+          information to those services.
+        </p>
+      </>
     ),
   },
+
   {
     number: "09",
     title: "CHILDREN'S PRIVACY",
     content: (
-      <p>
-        Our website and business services are not intended to knowingly collect
-        personal information from children through general project enquiry
-        forms. If you believe information relating to a child has been provided
-        to us inappropriately, please contact us so that it can be reviewed.
-      </p>
+      <>
+        <p>
+          Our website and general business enquiry services are not designed
+          for the purpose of knowingly collecting personal information from
+          children.
+        </p>
+
+        <p>
+          If you believe personal information relating to a child has been
+          submitted to us inappropriately, please contact us so the matter can
+          be reviewed.
+        </p>
+      </>
     ),
   },
+
   {
     number: "10",
+    title: "INTERNATIONAL & THIRD-PARTY PROCESSING",
+    content: (
+      <>
+        <p>
+          Some technology, hosting, communication or cloud service providers
+          used to operate our website or business may process information using
+          infrastructure located in different regions.
+        </p>
+
+        <p>
+          Where third-party services are used, their handling of information
+          may also be subject to their respective privacy policies and
+          applicable laws.
+        </p>
+      </>
+    ),
+  },
+
+  {
+    number: "11",
     title: "CHANGES TO THIS POLICY",
     content: (
-      <p>
-        We may update this Privacy Policy as our website, services, or data
-        practices change. The updated version may be posted on this page with a
-        revised effective date.
-      </p>
+      <>
+        <p>
+          We may update this Privacy Policy when our website, services,
+          technologies, legal requirements or data practices change.
+        </p>
+
+        <p>
+          When changes are made, the revised version may be published on this
+          page together with an updated effective date.
+        </p>
+      </>
     ),
   },
 ];
@@ -178,6 +276,8 @@ export default function PrivacyPolicyPage() {
     <>
       <section className="privacy-page">
         <div className="privacy-inner">
+
+          {/* HERO */}
           <header className="privacy-hero">
             <span>LEGAL / NEXKRIPA IT INDIA</span>
 
@@ -188,51 +288,77 @@ export default function PrivacyPolicyPage() {
 
             <div className="privacy-hero-bottom">
               <p>
-                This policy explains how NexKripa IT INDIA may handle personal
-                information when you use our website or contact us about our
-                services.
+                This Privacy Policy explains how NexKripa IT INDIA may collect,
+                use, store, share and protect personal information when you use
+                our website or contact us about our services.
               </p>
 
-              <small>LAST UPDATED: 08 AUGUST 2026</small>
+              <small>
+                LAST UPDATED: 11 AUGUST 2026
+              </small>
             </div>
           </header>
 
+          {/* CONTENT */}
           <div className="privacy-content">
+
             <aside className="privacy-sidebar">
               <span>PRIVACY POLICY</span>
+
               <p>
-                Clear information about what may be collected, why it may be
-                used, and the choices available to you.
+                Clear information about what data may be collected, why it may
+                be used and the choices that may be available to you.
               </p>
             </aside>
 
             <div className="privacy-sections">
+
               {sections.map((section) => (
-                <article className="privacy-section" key={section.number}>
-                  <span className="privacy-number">{section.number}</span>
+                <article
+                  className="privacy-section"
+                  key={section.number}
+                >
+                  <span className="privacy-number">
+                    {section.number}
+                  </span>
 
                   <div>
                     <h2>{section.title}</h2>
-                    <div className="privacy-copy">{section.content}</div>
+
+                    <div className="privacy-copy">
+                      {section.content}
+                    </div>
                   </div>
                 </article>
               ))}
 
+              {/* CONTACT */}
               <article className="privacy-section privacy-contact-section">
-                <span className="privacy-number">11</span>
+                <span className="privacy-number">
+                  12
+                </span>
 
                 <div>
-                  <h2>CONTACT US</h2>
+                  <h2>
+                    PRIVACY CONTACT
+                  </h2>
 
                   <div className="privacy-copy">
                     <p>
-                      For privacy-related questions, requests, or concerns,
-                      contact:
+                      For privacy-related questions, correction requests,
+                      deletion requests or other concerns, you can contact
+                      NexKripa IT INDIA.
                     </p>
 
                     <div className="privacy-contact-card">
-                      <strong>NexKripa IT INDIA</strong>
-                      <span>Mumbai, Maharashtra, India</span>
+                      <strong>
+                        NexKripa IT INDIA
+                      </strong>
+
+                      <span>
+                        Mumbai, Maharashtra, India
+                      </span>
+
                       <a href="mailto:hello@nexkripa.com">
                         hello@nexkripa.com
                       </a>
@@ -240,16 +366,41 @@ export default function PrivacyPolicyPage() {
                   </div>
                 </div>
               </article>
+
             </div>
           </div>
 
+          {/* WEBSITE LINKS */}
+          <div className="privacy-links">
+            <Link href="/">
+              HOME
+            </Link>
+
+            <Link href="/about">
+              ABOUT NEXKRIPA
+            </Link>
+
+            <Link href="/services">
+              SERVICES
+            </Link>
+
+            <Link href="/contact">
+              CONTACT
+            </Link>
+          </div>
+
+          {/* END */}
           <div className="privacy-end">
-            <span>NEXKRIPA IT INDIA</span>
+            <span>
+              NEXKRIPA IT INDIA
+            </span>
+
             <h2>
               YOUR DATA.
               <strong>YOUR TRUST.</strong>
             </h2>
           </div>
+
         </div>
       </section>
     </>

@@ -9,12 +9,12 @@ const services = [
     image: "/hero/website.jpg",
     className: "service-cell-a",
   },
-  {
-    title: "CORPORATE BRANDING",
-    href: "./services/corporate-branding",
-    image: "/hero/corporate-branding.png",
-    className: "service-cell-b",
-  },
+  // {
+  //   title: "CORPORATE BRANDING",
+  //   href: "./services/corporate-branding",
+  //   image: "/hero/corporate-branding.png",
+  //   className: "service-cell-b",
+  // },
   {
     title: "PERSONAL BRANDING",
     href: "./services/personal-branding",
@@ -33,24 +33,24 @@ const services = [
     image: "/hero/crm.png",
     className: "service-cell-e",
   },
-  {
-    title: "IT CONSULTANCY",
-    href: "./services/it-consultancy",
-    image: "/hero/it-consultancy.png",
-    className: "service-cell-f",
-  },
+  // {
+  //   title: "IT CONSULTANCY",
+  //   href: "./services/it-consultancy",
+  //   image: "/hero/it-consultancy.png",
+  //   className: "service-cell-f",
+  // },
   {
     title: "AI AUTOMATION",
     href: "./services/ai-automation",
     image: "/hero/ai-automation.png",
     className: "service-cell-g",
   },
-  {
-    title: "DATABASE MAINTENANCE",
-    href: "./services/database-maintenance",
-    image: "/hero/database-maintenance.png",
-    className: "service-cell-h",
-  },
+  // {
+  //   title: "DATABASE MAINTENANCE",
+  //   href: "./services/database-maintenance",
+  //   image: "/hero/database-maintenance.png",
+  //   className: "service-cell-h",
+  // },
   {
     title: "E-COMMERCE",
     href: "./services/e-commerce",
