@@ -42,7 +42,7 @@ export default function SiteFooter() {
             <Image
               src="/new-logo.png"
               alt="NexKripa IT INDIA Logo"
-              width={125}
+              width={170}
               height={60}
               className="ref-footer-logo-image"
             />
@@ -107,14 +107,14 @@ export default function SiteFooter() {
         </a>
 
         {/* GitHub */}
-        <a
+        {/* <a
           href="https://github.com/NexKripa01"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="NexKripa GitHub"
         >
           <FaGithub />
-        </a>
+        </a> */}
 
         {/* YouTube */}
         <a
