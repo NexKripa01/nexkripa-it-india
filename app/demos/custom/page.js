@@ -38,3 +38,38 @@
 //     </main>
 //   );
 // }
+
+
+export const metadata = {
+  title: "Custom Website Demo",
+
+  description:
+    "Explore a custom website demo by NexKripa.",
+
+  alternates: {
+    canonical: "/demos/custom",
+  },
+
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
+export default function CustomDemoPage() {
+  return (
+    <main
+      style={{
+        width: "100%",
+        minHeight: "100vh",
+        background: "#000",
+        color: "#fff",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <h1>Custom Demo Coming Soon</h1>
+    </main>
+  );
+}
