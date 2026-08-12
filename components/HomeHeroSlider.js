@@ -134,7 +134,6 @@ export default function HomeHeroSlider() {
             type="button"
             className={i === index ? "active" : ""}
             onClick={() => changeSlide(i)}
-            aria-label={`Show ${slide.word}`}
           />
         ))}
       </div>
