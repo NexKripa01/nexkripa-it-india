@@ -43,6 +43,16 @@ const demos = [
 
   {
     number: "01",
+    title: "School / Institute",
+    category: "Education",
+    description:
+      "An education website concept for schools and institutes with programs, admissions, notices and enquiry sections.",
+    image: "/demos/school-demo.png",
+    demoUrl: "/demos/school",
+  },
+
+  {
+    number: "02",
     title: "E-Commerce Store",
     category: "Online Shopping",
     description:
@@ -51,7 +61,7 @@ const demos = [
     demoUrl: "/demos/ecommerce",
   },
   {
-    number: "02",
+    number: "03",
     title: "Restaurant Website",
     category: "Food & Hospitality",
     description:
@@ -59,18 +69,18 @@ const demos = [
     image: "/demos/restaurant-demo.jpg",
     demoUrl: "#",
   },
+  // {
+  //   number: "04",
+  //   title: "Personal Portfolio",
+  //   category: "Personal Branding",
+  //   description:
+  //     "A professional portfolio demo for developers, designers, creators and professionals who want a strong personal presence.",
+  //   image: "/demos/portfolio-demo.png",
+  //   demoUrl: "/demos/portfolio",
+  // },
   {
-    number: "03",
-    title: "Personal Portfolio",
-    category: "Personal Branding",
-    description:
-      "A professional portfolio demo for developers, designers, creators and professionals who want a strong personal presence.",
-    image: "/demos/portfolio-demo.png",
-    demoUrl: "/demos/portfolio",
-  },
-  {
-    number: "04",
-    title: "Salon Website",
+    number: "05",
+    title: "Custom Demo Website",
     category: "Beauty & Wellness",
     description:
       "A premium salon website concept with service listings, appointment CTA, gallery and local-business focused design.",
@@ -78,7 +88,7 @@ const demos = [
     demoUrl: "#",
   },
   {
-    number: "05",
+    number: "06",
     title: "Real Estate Website",
     category: "Property",
     description:
@@ -86,15 +96,7 @@ const demos = [
     image: "/demos/real-estate-demo.jpg",
     demoUrl: "#",
   },
-  {
-    number: "06",
-    title: "School / Institute",
-    category: "Education",
-    description:
-      "An education website concept for schools and institutes with programs, admissions, notices and enquiry sections.",
-    image: "/demos/institute-demo.jpg",
-    demoUrl: "#",
-  },
+  
 ];
 
 const demoSchema = {
