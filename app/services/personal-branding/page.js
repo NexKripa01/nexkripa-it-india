@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata = {
   title: "Personal Branding Services in Mumbai",
@@ -33,7 +34,9 @@ export const metadata = {
       "Personal branding for professionals, founders and creators through positioning, visual identity, profile presence, content direction and personal websites.",
 
     url: "/services/personal-branding",
+
     siteName: "NexKripa",
+
     type: "website",
 
     images: [
@@ -48,6 +51,7 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
+
     title: "Personal Branding Services in Mumbai | NexKripa IT INDIA",
 
     description:
@@ -125,346 +129,365 @@ const process = [
 
 export default function PersonalBrandingPage() {
   return (
-    <main className="pb-page">
+    <>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://www.nexkripa.in/",
+          },
+          {
+            name: "Services",
+            url: "https://www.nexkripa.in/services",
+          },
+          {
+            name: "Personal Branding",
+            url: "https://www.nexkripa.in/services/personal-branding",
+          },
+        ]}
+      />
 
-      {/* HERO */}
-      <section className="pb-hero">
-        <div className="pb-hero-bg" aria-hidden="true" />
-        <div className="pb-hero-overlay" aria-hidden="true" />
+      <main className="pb-page">
 
-        <div className="pb-container pb-hero-inner">
-          <Reveal>
-            <span className="pb-kicker">
-              PERSONAL BRANDING SERVICES / MUMBAI
-            </span>
-          </Reveal>
+        {/* HERO */}
+        <section className="pb-hero">
+          <div className="pb-hero-bg" aria-hidden="true" />
+          <div className="pb-hero-overlay" aria-hidden="true" />
 
-          <Reveal delay={0.06}>
-            <h1>
-              MAKE YOUR
-              <span>NAME</span>
-              <em>MEMORABLE.</em>
-            </h1>
-          </Reveal>
+          <div className="pb-container pb-hero-inner">
+            <Reveal>
+              <span className="pb-kicker">
+                PERSONAL BRANDING SERVICES / MUMBAI
+              </span>
+            </Reveal>
 
-          <Reveal delay={0.12}>
-            <div className="pb-hero-bottom">
-              <p>
-                NexKripa IT INDIA provides personal branding services in Mumbai
-                and across India for professionals, founders and creators who
-                want a clear, credible and consistent digital presence.
-              </p>
+            <Reveal delay={0.06}>
+              <h1>
+                MAKE YOUR
+                <span>NAME</span>
+                <em>MEMORABLE.</em>
+              </h1>
+            </Reveal>
 
-              <Link href="/contact" className="pb-btn">
-                BUILD MY BRAND <span>↗</span>
-              </Link>
+            <Reveal delay={0.12}>
+              <div className="pb-hero-bottom">
+                <p>
+                  NexKripa IT INDIA provides personal branding services in Mumbai
+                  and across India for professionals, founders and creators who
+                  want a clear, credible and consistent digital presence.
+                </p>
+
+                <Link href="/contact" className="pb-btn">
+                  BUILD MY BRAND <span>↗</span>
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* INTRO */}
+        <section className="pb-intro">
+          <div className="pb-container">
+            <Reveal>
+              <span className="pb-kicker">
+                PERSONAL BRAND STRATEGY
+              </span>
+            </Reveal>
+
+            <div className="pb-intro-grid">
+              <Reveal delay={0.05}>
+                <h2>
+                  YOUR WORK
+                  <br />
+                  NEEDS A <em>FACE.</em>
+                </h2>
+              </Reveal>
+
+              <div className="pb-intro-copy">
+                <Reveal delay={0.1}>
+                  <p className="pb-lead">
+                    People often discover you online before they ever meet you.
+                    Your profiles, website, visuals and content all contribute to
+                    that first impression.
+                  </p>
+                </Reveal>
+
+                <Reveal delay={0.16}>
+                  <p>
+                    We bring those pieces together into one clear personal brand
+                    identity so your professional presence feels intentional
+                    instead of fragmented.
+                  </p>
+                </Reveal>
+
+                <Reveal delay={0.2}>
+                  <p>
+                    Our personal branding approach can cover positioning, visual
+                    identity, LinkedIn and profile presence, content direction
+                    and a professional personal website based on your goals.
+                  </p>
+                </Reveal>
+              </div>
             </div>
-          </Reveal>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* INTRO */}
-      <section className="pb-intro">
-        <div className="pb-container">
-          <Reveal>
-            <span className="pb-kicker">
-              PERSONAL BRAND STRATEGY
-            </span>
-          </Reveal>
+        {/* SHOWCASE */}
+        <section
+          className="pb-showcase"
+          aria-label="Personal branding identity showcase"
+        >
+          <div
+            className="pb-showcase-image"
+            role="img"
+            aria-label="Professional personal branding and visual identity by NexKripa IT INDIA"
+          />
 
-          <div className="pb-intro-grid">
-            <Reveal delay={0.05}>
+          <div className="pb-showcase-copy">
+            <Reveal>
+              <span className="pb-kicker">
+                PERSONAL BRAND SYSTEM
+              </span>
+
               <h2>
-                YOUR WORK
+                ONE PERSON.
                 <br />
-                NEEDS A <em>FACE.</em>
+                <em>ONE CLEAR STORY.</em>
               </h2>
             </Reveal>
 
-            <div className="pb-intro-copy">
-              <Reveal delay={0.1}>
-                <p className="pb-lead">
-                  People often discover you online before they ever meet you.
-                  Your profiles, website, visuals and content all contribute to
-                  that first impression.
-                </p>
-              </Reveal>
-
-              <Reveal delay={0.16}>
-                <p>
-                  We bring those pieces together into one clear personal brand
-                  identity so your professional presence feels intentional
-                  instead of fragmented.
-                </p>
-              </Reveal>
-
-              <Reveal delay={0.2}>
-                <p>
-                  Our personal branding approach can cover positioning, visual
-                  identity, LinkedIn and profile presence, content direction
-                  and a professional personal website based on your goals.
-                </p>
-              </Reveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SHOWCASE */}
-      <section
-        className="pb-showcase"
-        aria-label="Personal branding identity showcase"
-      >
-        <div
-          className="pb-showcase-image"
-          role="img"
-          aria-label="Professional personal branding and visual identity by NexKripa IT INDIA"
-        />
-
-        <div className="pb-showcase-copy">
-          <Reveal>
-            <span className="pb-kicker">
-              PERSONAL BRAND SYSTEM
-            </span>
-
-            <h2>
-              ONE PERSON.
-              <br />
-              <em>ONE CLEAR STORY.</em>
-            </h2>
-          </Reveal>
-
-          <Reveal delay={0.08}>
-            <p>
-              We create a consistent system for how you present yourself —
-              from profile imagery and visual language to your website,
-              professional content and important digital touchpoints.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* DELIVERABLES */}
-      <section className="pb-deliverables">
-        <div className="pb-container">
-          <Reveal>
-            <div className="pb-section-head">
-              <span className="pb-kicker">
-                PERSONAL BRANDING DELIVERABLES
-              </span>
-
-              <h2>
-                YOUR PERSONAL
-                <br />
-                <em>BRAND TOOLKIT.</em>
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="pb-grid">
-            {deliverables.map(([number, title, text], index) => (
-              <Reveal key={number} delay={index * 0.045}>
-                <article className="pb-card">
-                  <span>{number}</span>
-
-                  <div className="pb-line" />
-
-                  <h3>{title}</h3>
-
-                  <p>{text}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* DIGITAL PRESENCE */}
-      <section className="pb-digital">
-        <div className="pb-container pb-digital-grid">
-          <Reveal>
-            <div className="pb-digital-copy">
-              <span className="pb-kicker">
-                DIGITAL PERSONAL BRAND
-              </span>
-
-              <h2>
-                ONE IDENTITY.
-                <br />
-                EVERY <em>PLATFORM.</em>
-              </h2>
-
+            <Reveal delay={0.08}>
               <p>
-                A strong personal brand should feel recognizable across your
-                website, LinkedIn profile, social presence, presentation
-                assets and every place your audience encounters you.
+                We create a consistent system for how you present yourself —
+                from profile imagery and visual language to your website,
+                professional content and important digital touchpoints.
               </p>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* DELIVERABLES */}
+        <section className="pb-deliverables">
+          <div className="pb-container">
+            <Reveal>
+              <div className="pb-section-head">
+                <span className="pb-kicker">
+                  PERSONAL BRANDING DELIVERABLES
+                </span>
+
+                <h2>
+                  YOUR PERSONAL
+                  <br />
+                  <em>BRAND TOOLKIT.</em>
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="pb-grid">
+              {deliverables.map(([number, title, text], index) => (
+                <Reveal key={number} delay={index * 0.045}>
+                  <article className="pb-card">
+                    <span>{number}</span>
+
+                    <div className="pb-line" />
+
+                    <h3>{title}</h3>
+
+                    <p>{text}</p>
+                  </article>
+                </Reveal>
+              ))}
             </div>
-          </Reveal>
+          </div>
+        </section>
 
-          <Reveal delay={0.08}>
-            <div
-              className="pb-digital-image"
-              role="img"
-              aria-label="Consistent personal brand across website social media and professional profiles"
-            />
-          </Reveal>
-        </div>
-      </section>
+        {/* DIGITAL PRESENCE */}
+        <section className="pb-digital">
+          <div className="pb-container pb-digital-grid">
+            <Reveal>
+              <div className="pb-digital-copy">
+                <span className="pb-kicker">
+                  DIGITAL PERSONAL BRAND
+                </span>
 
-      {/* PROCESS */}
-      <section className="pb-process">
-        <div className="pb-container">
-          <Reveal>
-            <div className="pb-section-head">
+                <h2>
+                  ONE IDENTITY.
+                  <br />
+                  EVERY <em>PLATFORM.</em>
+                </h2>
+
+                <p>
+                  A strong personal brand should feel recognizable across your
+                  website, LinkedIn profile, social presence, presentation
+                  assets and every place your audience encounters you.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.08}>
+              <div
+                className="pb-digital-image"
+                role="img"
+                aria-label="Consistent personal brand across website social media and professional profiles"
+              />
+            </Reveal>
+          </div>
+        </section>
+
+        {/* PROCESS */}
+        <section className="pb-process">
+          <div className="pb-container">
+            <Reveal>
+              <div className="pb-section-head">
+                <span className="pb-kicker">
+                  OUR PERSONAL BRANDING PROCESS
+                </span>
+
+                <h2>
+                  FROM YOU
+                  <br />
+                  TO <em>YOUR BRAND.</em>
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="pb-process-list">
+              {process.map(([number, title, text], index) => (
+                <Reveal key={number} delay={index * 0.04}>
+                  <article className="pb-process-row">
+                    <span className="pb-num">{number}</span>
+
+                    <h3>{title}</h3>
+
+                    <p>{text}</p>
+
+                    <i />
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* RELATED / INTERNAL LINKS */}
+        <section className="pb-related">
+          <div className="pb-container">
+            <Reveal>
+              <div className="pb-section-head">
+                <span className="pb-kicker">
+                  EXPLORE MORE
+                </span>
+
+                <h2>
+                  BUILD YOUR
+                  <br />
+                  <em>COMPLETE PRESENCE.</em>
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="pb-related-grid">
+
+              <Link
+                href="/services/website"
+                className="pb-related-link"
+              >
+                <span>01</span>
+
+                <div>
+                  <h3>Personal Website</h3>
+
+                  <p>
+                    Build a professional website that presents your story,
+                    work, experience and contact details clearly.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+              <Link
+                href="/services/ui-ux"
+                className="pb-related-link"
+              >
+                <span>02</span>
+
+                <div>
+                  <h3>UI / UX Design</h3>
+
+                  <p>
+                    Create a polished digital experience around your personal
+                    website and professional presence.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+              <Link
+                href="/services/corporate-branding"
+                className="pb-related-link"
+              >
+                <span>03</span>
+
+                <div>
+                  <h3>Corporate Branding</h3>
+
+                  <p>
+                    Explore full business branding if you are also building a
+                    company, startup or organization.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+              <Link
+                href="/contact"
+                className="pb-related-link"
+              >
+                <span>04</span>
+
+                <div>
+                  <h3>Start Your Personal Brand</h3>
+
+                  <p>
+                    Tell us about your goals, work and the professional image
+                    you want to build.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="pb-cta">
+          <div className="pb-container">
+            <Reveal>
               <span className="pb-kicker">
-                OUR PERSONAL BRANDING PROCESS
+                READY TO SHOW UP DIFFERENTLY?
               </span>
 
               <h2>
-                FROM YOU
+                BUILD A BRAND
                 <br />
-                TO <em>YOUR BRAND.</em>
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="pb-process-list">
-            {process.map(([number, title, text], index) => (
-              <Reveal key={number} delay={index * 0.04}>
-                <article className="pb-process-row">
-                  <span className="pb-num">{number}</span>
-
-                  <h3>{title}</h3>
-
-                  <p>{text}</p>
-
-                  <i />
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* RELATED / INTERNAL LINKS */}
-      <section className="pb-related">
-        <div className="pb-container">
-          <Reveal>
-            <div className="pb-section-head">
-              <span className="pb-kicker">
-                EXPLORE MORE
-              </span>
-
-              <h2>
-                BUILD YOUR
+                THAT FEELS
                 <br />
-                <em>COMPLETE PRESENCE.</em>
+                <em>LIKE YOU.</em>
               </h2>
-            </div>
-          </Reveal>
 
-          <div className="pb-related-grid">
-
-            <Link
-              href="/services/website"
-              className="pb-related-link"
-            >
-              <span>01</span>
-
-              <div>
-                <h3>Personal Website</h3>
-
-                <p>
-                  Build a professional website that presents your story,
-                  work, experience and contact details clearly.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
-            <Link
-              href="/services/ui-ux"
-              className="pb-related-link"
-            >
-              <span>02</span>
-
-              <div>
-                <h3>UI / UX Design</h3>
-
-                <p>
-                  Create a polished digital experience around your personal
-                  website and professional presence.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
-            <Link
-              href="/services/corporate-branding"
-              className="pb-related-link"
-            >
-              <span>03</span>
-
-              <div>
-                <h3>Corporate Branding</h3>
-
-                <p>
-                  Explore full business branding if you are also building a
-                  company, startup or organization.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
-            <Link
-              href="/contact"
-              className="pb-related-link"
-            >
-              <span>04</span>
-
-              <div>
-                <h3>Start Your Personal Brand</h3>
-
-                <p>
-                  Tell us about your goals, work and the professional image
-                  you want to build.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
+              <Link href="/contact" className="pb-cta-link">
+                START A PERSONAL BRANDING PROJECT <span>↗</span>
+              </Link>
+            </Reveal>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section className="pb-cta">
-        <div className="pb-container">
-          <Reveal>
-            <span className="pb-kicker">
-              READY TO SHOW UP DIFFERENTLY?
-            </span>
-
-            <h2>
-              BUILD A BRAND
-              <br />
-              THAT FEELS
-              <br />
-              <em>LIKE YOU.</em>
-            </h2>
-
-            <Link href="/contact" className="pb-cta-link">
-              START A PERSONAL BRANDING PROJECT <span>↗</span>
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-    </main>
+      </main>
+    </>
   );
 }

@@ -10,6 +10,7 @@ const menuItems = [
   { label: "PORTFOLIO", href: "/portfolio" },
   { label: "SERVICES", href: "/services" },
   { label: "CLIENTELE", href: "/clientele" },
+  { label: "DEMOS", href: "/demos" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -44,9 +45,7 @@ export default function Navbar() {
       clearHideTimer();
 
       if (!isMobile()) return;
-
       if (window.scrollY <= 30) return;
-
       if (open) return;
 
       hideTimer.current = window.setTimeout(() => {
@@ -137,6 +136,13 @@ export default function Navbar() {
       return (
         pathname === "/services" ||
         pathname.startsWith("/services/")
+      );
+    }
+
+    if (href === "/demos") {
+      return (
+        pathname === "/demos" ||
+        pathname.startsWith("/demos/")
       );
     }
 

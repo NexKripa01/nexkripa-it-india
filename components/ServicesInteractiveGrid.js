@@ -9,6 +9,13 @@ const services = [
     image: "/hero/website.jpg",
     className: "service-cell-a",
   },
+  {
+    title: "REDESIGN",
+    href: "./services/redesign",
+    image: "/hero/web-redesign.png",
+    className: "service-cell-b",
+  },
+
   // {
   //   title: "CORPORATE BRANDING",
   //   href: "./services/corporate-branding",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata = {
   title: "AI Automation Services in Mumbai",
@@ -28,10 +29,14 @@ export const metadata = {
 
   openGraph: {
     title: "AI Automation Services in Mumbai | NexKripa IT INDIA",
+
     description:
       "AI-powered workflow automation, assistants, integrations and reporting solutions for modern businesses.",
+
     url: "/services/ai-automation",
+
     siteName: "NexKripa",
+
     type: "website",
 
     images: [
@@ -46,9 +51,12 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
+
     title: "AI Automation Services in Mumbai | NexKripa IT INDIA",
+
     description:
       "AI workflow automation, assistants and integrations for businesses.",
+
     images: ["/og-image.png"],
   },
 };
@@ -121,348 +129,369 @@ const process = [
 
 export default function AIAutomationPage() {
   return (
-    <main className="ai-page">
+    <>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://www.nexkripa.in/",
+          },
+          {
+            name: "Services",
+            url: "https://www.nexkripa.in/services",
+          },
+          {
+            name: "AI Automation",
+            url: "https://www.nexkripa.in/services/ai-automation",
+          },
+        ]}
+      />
 
-      {/* HERO */}
-      <section className="ai-hero">
-        <div className="ai-hero-bg" aria-hidden="true" />
-        <div className="ai-hero-overlay" aria-hidden="true" />
+      <main className="ai-page">
 
-        <div className="ai-container ai-hero-inner">
-          <Reveal>
-            <span className="ai-kicker">
-              AI AUTOMATION SERVICES / MUMBAI
-            </span>
-          </Reveal>
+        {/* HERO */}
+        <section className="ai-hero">
+          <div className="ai-hero-bg" aria-hidden="true" />
+          <div className="ai-hero-overlay" aria-hidden="true" />
 
-          <Reveal delay={0.06}>
-            <h1>
-              AUTOMATE THE
-              <span>REPETITIVE.</span>
-              <em>FOCUS ON MORE.</em>
-            </h1>
-          </Reveal>
+          <div className="ai-container ai-hero-inner">
+            <Reveal>
+              <span className="ai-kicker">
+                AI AUTOMATION SERVICES / MUMBAI
+              </span>
+            </Reveal>
 
-          <Reveal delay={0.12}>
-            <div className="ai-hero-bottom">
-              <p>
-                NexKripa IT INDIA provides AI automation services in Mumbai
-                and across India for businesses that want to reduce repetitive
-                work, connect systems and improve everyday operations.
-              </p>
+            <Reveal delay={0.06}>
+              <h1>
+                AUTOMATE THE
+                <span>REPETITIVE.</span>
+                <em>FOCUS ON MORE.</em>
+              </h1>
+            </Reveal>
 
-              <Link href="/contact" className="ai-btn">
-                AUTOMATE A WORKFLOW <span>↗</span>
-              </Link>
+            <Reveal delay={0.12}>
+              <div className="ai-hero-bottom">
+                <p>
+                  NexKripa IT INDIA provides AI automation services in Mumbai
+                  and across India for businesses that want to reduce repetitive
+                  work, connect systems and improve everyday operations.
+                </p>
+
+                <Link href="/contact" className="ai-btn">
+                  AUTOMATE A WORKFLOW <span>↗</span>
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* INTRO */}
+        <section className="ai-intro">
+          <div className="ai-container">
+            <Reveal>
+              <span className="ai-kicker">
+                BUSINESS PROCESS AUTOMATION
+              </span>
+            </Reveal>
+
+            <div className="ai-intro-grid">
+              <Reveal delay={0.05}>
+                <h2>
+                  LESS MANUAL WORK.
+                  <br />
+                  <em>MORE MOMENTUM.</em>
+                </h2>
+              </Reveal>
+
+              <div className="ai-intro-copy">
+                <Reveal delay={0.1}>
+                  <p className="ai-lead">
+                    The best automation is not the one with the most AI. It is
+                    the one that removes a real bottleneck without creating a
+                    new one.
+                  </p>
+                </Reveal>
+
+                <Reveal delay={0.16}>
+                  <p>
+                    We start with your existing workflow, then decide where
+                    business rules, integrations or AI can make the process
+                    faster, more consistent and easier for your team to manage.
+                  </p>
+                </Reveal>
+
+                <Reveal delay={0.2}>
+                  <p>
+                    Our AI automation solutions can support lead handling,
+                    reporting, document processing, internal workflows,
+                    customer communication and other repetitive business
+                    operations.
+                  </p>
+                </Reveal>
+              </div>
             </div>
-          </Reveal>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* INTRO */}
-      <section className="ai-intro">
-        <div className="ai-container">
-          <Reveal>
-            <span className="ai-kicker">
-              BUSINESS PROCESS AUTOMATION
-            </span>
-          </Reveal>
+        {/* SHOWCASE */}
+        <section
+          className="ai-showcase"
+          aria-label="AI automation workflow showcase"
+        >
+          <div
+            className="ai-showcase-image"
+            role="img"
+            aria-label="AI workflow automation and system integration by NexKripa IT INDIA"
+          />
 
-          <div className="ai-intro-grid">
-            <Reveal delay={0.05}>
+          <div className="ai-showcase-copy">
+            <Reveal>
+              <span className="ai-kicker">
+                CONNECTED WORKFLOWS
+              </span>
+
               <h2>
-                LESS MANUAL WORK.
+                SYSTEMS THAT
                 <br />
-                <em>MORE MOMENTUM.</em>
+                <em>WORK TOGETHER.</em>
               </h2>
             </Reveal>
 
-            <div className="ai-intro-copy">
-              <Reveal delay={0.1}>
-                <p className="ai-lead">
-                  The best automation is not the one with the most AI. It is
-                  the one that removes a real bottleneck without creating a
-                  new one.
-                </p>
-              </Reveal>
-
-              <Reveal delay={0.16}>
-                <p>
-                  We start with your existing workflow, then decide where
-                  business rules, integrations or AI can make the process
-                  faster, more consistent and easier for your team to manage.
-                </p>
-              </Reveal>
-
-              <Reveal delay={0.2}>
-                <p>
-                  Our AI automation solutions can support lead handling,
-                  reporting, document processing, internal workflows,
-                  customer communication and other repetitive business
-                  operations.
-                </p>
-              </Reveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SHOWCASE */}
-      <section
-        className="ai-showcase"
-        aria-label="AI automation workflow showcase"
-      >
-        <div
-          className="ai-showcase-image"
-          role="img"
-          aria-label="AI workflow automation and system integration by NexKripa IT INDIA"
-        />
-
-        <div className="ai-showcase-copy">
-          <Reveal>
-            <span className="ai-kicker">
-              CONNECTED WORKFLOWS
-            </span>
-
-            <h2>
-              SYSTEMS THAT
-              <br />
-              <em>WORK TOGETHER.</em>
-            </h2>
-          </Reveal>
-
-          <Reveal delay={0.08}>
-            <p>
-              From enquiry routing and follow-ups to document processing,
-              data movement and automated reporting, we connect the steps that
-              usually require someone to copy, paste, check and repeat.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* CAPABILITIES */}
-      <section className="ai-capabilities">
-        <div className="ai-container">
-          <Reveal>
-            <div className="ai-section-head">
-              <span className="ai-kicker">
-                AI AUTOMATION CAPABILITIES
-              </span>
-
-              <h2>
-                SMARTER
-                <br />
-                <em>DAILY OPERATIONS.</em>
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="ai-grid">
-            {capabilities.map(([number, title, text], index) => (
-              <Reveal key={number} delay={index * 0.045}>
-                <article className="ai-card">
-                  <span>{number}</span>
-
-                  <div className="ai-line" />
-
-                  <h3>{title}</h3>
-
-                  <p>{text}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* HUMAN + AUTOMATION */}
-      <section className="ai-logic">
-        <div className="ai-container ai-logic-grid">
-          <Reveal>
-            <div className="ai-logic-copy">
-              <span className="ai-kicker">
-                HUMAN + AI AUTOMATION
-              </span>
-
-              <h2>
-                AUTOMATE THE
-                <br />
-                TASK. KEEP THE <em>CONTROL.</em>
-              </h2>
-
+            <Reveal delay={0.08}>
               <p>
-                Not every business decision should be fully automated. We can
-                design approval points, alerts and human review into the
-                workflow so the system remains practical, controlled and
-                accountable.
+                From enquiry routing and follow-ups to document processing,
+                data movement and automated reporting, we connect the steps that
+                usually require someone to copy, paste, check and repeat.
               </p>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* CAPABILITIES */}
+        <section className="ai-capabilities">
+          <div className="ai-container">
+            <Reveal>
+              <div className="ai-section-head">
+                <span className="ai-kicker">
+                  AI AUTOMATION CAPABILITIES
+                </span>
+
+                <h2>
+                  SMARTER
+                  <br />
+                  <em>DAILY OPERATIONS.</em>
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="ai-grid">
+              {capabilities.map(([number, title, text], index) => (
+                <Reveal key={number} delay={index * 0.045}>
+                  <article className="ai-card">
+                    <span>{number}</span>
+
+                    <div className="ai-line" />
+
+                    <h3>{title}</h3>
+
+                    <p>{text}</p>
+                  </article>
+                </Reveal>
+              ))}
             </div>
-          </Reveal>
+          </div>
+        </section>
 
-          <Reveal delay={0.08}>
-            <div
-              className="ai-logic-image"
-              role="img"
-              aria-label="Human controlled AI automation workflow"
-            />
-          </Reveal>
-        </div>
-      </section>
+        {/* HUMAN + AUTOMATION */}
+        <section className="ai-logic">
+          <div className="ai-container ai-logic-grid">
+            <Reveal>
+              <div className="ai-logic-copy">
+                <span className="ai-kicker">
+                  HUMAN + AI AUTOMATION
+                </span>
 
-      {/* PROCESS */}
-      <section className="ai-process">
-        <div className="ai-container">
-          <Reveal>
-            <div className="ai-section-head">
+                <h2>
+                  AUTOMATE THE
+                  <br />
+                  TASK. KEEP THE <em>CONTROL.</em>
+                </h2>
+
+                <p>
+                  Not every business decision should be fully automated. We can
+                  design approval points, alerts and human review into the
+                  workflow so the system remains practical, controlled and
+                  accountable.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.08}>
+              <div
+                className="ai-logic-image"
+                role="img"
+                aria-label="Human controlled AI automation workflow"
+              />
+            </Reveal>
+          </div>
+        </section>
+
+        {/* PROCESS */}
+        <section className="ai-process">
+          <div className="ai-container">
+            <Reveal>
+              <div className="ai-section-head">
+                <span className="ai-kicker">
+                  OUR AI AUTOMATION PROCESS
+                </span>
+
+                <h2>
+                  FIND THE FRICTION.
+                  <br />
+                  <em>AUTOMATE THE RIGHT PART.</em>
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="ai-process-list">
+              {process.map(([number, title, text], index) => (
+                <Reveal key={number} delay={index * 0.04}>
+                  <article className="ai-process-row">
+                    <span className="ai-num">
+                      {number}
+                    </span>
+
+                    <h3>{title}</h3>
+
+                    <p>{text}</p>
+
+                    <i />
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* RELATED / INTERNAL LINKS */}
+        <section className="ai-related">
+          <div className="ai-container">
+            <Reveal>
+              <div className="ai-section-head">
+                <span className="ai-kicker">
+                  EXPLORE MORE
+                </span>
+
+                <h2>
+                  CONNECT AI WITH
+                  <br />
+                  <em>YOUR BUSINESS.</em>
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="ai-related-grid">
+
+              <Link
+                href="/services/crm"
+                className="ai-related-link"
+              >
+                <span>01</span>
+
+                <div>
+                  <h3>CRM Development</h3>
+
+                  <p>
+                    Connect customer data, lead management and operational
+                    workflows into a structured CRM system.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+              <Link
+                href="/services/database-maintenance"
+                className="ai-related-link"
+              >
+                <span>02</span>
+
+                <div>
+                  <h3>Database Maintenance</h3>
+
+                  <p>
+                    Keep the data behind your business systems organized,
+                    reliable and ready for connected workflows.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+              <Link
+                href="/services/website"
+                className="ai-related-link"
+              >
+                <span>03</span>
+
+                <div>
+                  <h3>Web Development</h3>
+
+                  <p>
+                    Integrate intelligent features and automated workflows into
+                    modern web experiences.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+              <Link
+                href="/contact"
+                className="ai-related-link"
+              >
+                <span>04</span>
+
+                <div>
+                  <h3>Start an Automation Project</h3>
+
+                  <p>
+                    Tell us which repetitive workflow or business process you
+                    want to improve.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="ai-cta">
+          <div className="ai-container">
+            <Reveal>
               <span className="ai-kicker">
-                OUR AI AUTOMATION PROCESS
+                WHAT SHOULD YOUR TEAM STOP DOING MANUALLY?
               </span>
 
               <h2>
-                FIND THE FRICTION.
+                LET THE
                 <br />
-                <em>AUTOMATE THE RIGHT PART.</em>
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="ai-process-list">
-            {process.map(([number, title, text], index) => (
-              <Reveal key={number} delay={index * 0.04}>
-                <article className="ai-process-row">
-                  <span className="ai-num">{number}</span>
-
-                  <h3>{title}</h3>
-
-                  <p>{text}</p>
-
-                  <i />
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* RELATED / INTERNAL LINKS */}
-      <section className="ai-related">
-        <div className="ai-container">
-          <Reveal>
-            <div className="ai-section-head">
-              <span className="ai-kicker">
-                EXPLORE MORE
-              </span>
-
-              <h2>
-                CONNECT AI WITH
+                WORKFLOW
                 <br />
-                <em>YOUR BUSINESS.</em>
+                <em>MOVE ITSELF.</em>
               </h2>
-            </div>
-          </Reveal>
 
-          <div className="ai-related-grid">
-
-            <Link
-              href="/services/crm"
-              className="ai-related-link"
-            >
-              <span>01</span>
-
-              <div>
-                <h3>CRM Development</h3>
-
-                <p>
-                  Connect customer data, lead management and operational
-                  workflows into a structured CRM system.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
-            <Link
-              href="/services/database-maintenance"
-              className="ai-related-link"
-            >
-              <span>02</span>
-
-              <div>
-                <h3>Database Maintenance</h3>
-
-                <p>
-                  Keep the data behind your business systems organized,
-                  reliable and ready for connected workflows.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
-            <Link
-              href="/services/website"
-              className="ai-related-link"
-            >
-              <span>03</span>
-
-              <div>
-                <h3>Web Development</h3>
-
-                <p>
-                  Integrate intelligent features and automated workflows into
-                  modern web experiences.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
-            <Link
-              href="/contact"
-              className="ai-related-link"
-            >
-              <span>04</span>
-
-              <div>
-                <h3>Start an Automation Project</h3>
-
-                <p>
-                  Tell us which repetitive workflow or business process you
-                  want to improve.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
+              <Link href="/contact" className="ai-cta-link">
+                START AN AUTOMATION PROJECT <span>↗</span>
+              </Link>
+            </Reveal>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section className="ai-cta">
-        <div className="ai-container">
-          <Reveal>
-            <span className="ai-kicker">
-              WHAT SHOULD YOUR TEAM STOP DOING MANUALLY?
-            </span>
-
-            <h2>
-              LET THE
-              <br />
-              WORKFLOW
-              <br />
-              <em>MOVE ITSELF.</em>
-            </h2>
-
-            <Link href="/contact" className="ai-cta-link">
-              START AN AUTOMATION PROJECT <span>↗</span>
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-    </main>
+      </main>
+    </>
   );
 }

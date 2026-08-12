@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata = {
   title: "UI/UX Design Services in Mumbai",
@@ -128,386 +129,401 @@ const process = [
 
 export default function UIUXPage() {
   return (
-    <main className="ux-page">
+    <>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://www.nexkripa.in/",
+          },
+          {
+            name: "Services",
+            url: "https://www.nexkripa.in/services",
+          },
+          {
+            name: "UI/UX Design",
+            url: "https://www.nexkripa.in/services/ui-ux",
+          },
+        ]}
+      />
 
-      {/* =====================================================
-          HERO
-      ===================================================== */}
-      <section className="ux-hero">
-        <div
-          className="ux-hero-bg"
-          aria-hidden="true"
-        />
+      <main className="ux-page">
 
-        <div
-          className="ux-hero-overlay"
-          aria-hidden="true"
-        />
+        {/* =====================================================
+            HERO
+        ===================================================== */}
+        <section className="ux-hero">
+          <div
+            className="ux-hero-bg"
+            aria-hidden="true"
+          />
 
-        <div className="ux-container ux-hero-inner">
-          <Reveal>
-            <span className="ux-kicker">
-              UI/UX DESIGN SERVICES / MUMBAI
-            </span>
-          </Reveal>
+          <div
+            className="ux-hero-overlay"
+            aria-hidden="true"
+          />
 
-          <Reveal delay={0.06}>
-            <h1>
-              DESIGN THAT
-              <span>FEELS</span>
-              <em>EFFORTLESS.</em>
-            </h1>
-          </Reveal>
+          <div className="ux-container ux-hero-inner">
+            <Reveal>
+              <span className="ux-kicker">
+                UI/UX DESIGN SERVICES / MUMBAI
+              </span>
+            </Reveal>
 
-          <Reveal delay={0.12}>
-            <div className="ux-hero-bottom">
-              <p>
-                NexKripa IT INDIA provides UI/UX design services in Mumbai
-                and across India for websites, dashboards, apps and digital
-                products. We create interfaces that are visually clear,
-                responsive and easy to use.
-              </p>
+            <Reveal delay={0.06}>
+              <h1>
+                DESIGN THAT
+                <span>FEELS</span>
+                <em>EFFORTLESS.</em>
+              </h1>
+            </Reveal>
 
-              <Link
-                href="/contact"
-                className="ux-btn"
-              >
-                START A UI/UX PROJECT
-                <span>↗</span>
-              </Link>
+            <Reveal delay={0.12}>
+              <div className="ux-hero-bottom">
+                <p>
+                  NexKripa IT INDIA provides UI/UX design services in Mumbai
+                  and across India for websites, dashboards, apps and digital
+                  products. We create interfaces that are visually clear,
+                  responsive and easy to use.
+                </p>
+
+                <Link
+                  href="/contact"
+                  className="ux-btn"
+                >
+                  START A UI/UX PROJECT
+                  <span>↗</span>
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* =====================================================
+            INTRO
+        ===================================================== */}
+        <section className="ux-intro">
+          <div className="ux-container">
+            <Reveal>
+              <span className="ux-kicker">
+                USER EXPERIENCE DESIGN
+              </span>
+            </Reveal>
+
+            <div className="ux-intro-grid">
+              <Reveal delay={0.05}>
+                <h2>
+                  LESS FRICTION.
+                  <br />
+                  <em>MORE CLARITY.</em>
+                </h2>
+              </Reveal>
+
+              <div className="ux-intro-copy">
+                <Reveal delay={0.1}>
+                  <p className="ux-lead">
+                    Good UI attracts attention. Good UX helps people understand
+                    what to do next without making the experience feel
+                    complicated.
+                  </p>
+                </Reveal>
+
+                <Reveal delay={0.16}>
+                  <p>
+                    We combine information architecture, user flows, interface
+                    design and interaction thinking so every screen supports
+                    both the user and the business goal.
+                  </p>
+                </Reveal>
+
+                <Reveal delay={0.2}>
+                  <p>
+                    From business websites and SaaS dashboards to digital
+                    products, our UI/UX process focuses on usability,
+                    responsive layouts, visual consistency and clear actions.
+                  </p>
+                </Reveal>
+              </div>
             </div>
-          </Reveal>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      {/* =====================================================
-          INTRO
-      ===================================================== */}
-      <section className="ux-intro">
-        <div className="ux-container">
-          <Reveal>
-            <span className="ux-kicker">
-              USER EXPERIENCE DESIGN
-            </span>
-          </Reveal>
+        {/* =====================================================
+            SHOWCASE
+        ===================================================== */}
+        <section
+          className="ux-showcase"
+          aria-label="UI UX interface design showcase"
+        >
+          <div
+            className="ux-showcase-image"
+            role="img"
+            aria-label="Modern mobile user interface and user experience design by NexKripa IT INDIA"
+          />
 
-          <div className="ux-intro-grid">
-            <Reveal delay={0.05}>
+          <div className="ux-showcase-copy">
+            <Reveal>
+              <span className="ux-kicker">
+                INTERFACE DESIGN
+              </span>
+
               <h2>
-                LESS FRICTION.
+                EVERY SCREEN
                 <br />
-                <em>MORE CLARITY.</em>
+                HAS A <em>PURPOSE.</em>
               </h2>
             </Reveal>
 
-            <div className="ux-intro-copy">
-              <Reveal delay={0.1}>
-                <p className="ux-lead">
-                  Good UI attracts attention. Good UX helps people understand
-                  what to do next without making the experience feel
-                  complicated.
-                </p>
-              </Reveal>
-
-              <Reveal delay={0.16}>
-                <p>
-                  We combine information architecture, user flows, interface
-                  design and interaction thinking so every screen supports
-                  both the user and the business goal.
-                </p>
-              </Reveal>
-
-              <Reveal delay={0.2}>
-                <p>
-                  From business websites and SaaS dashboards to digital
-                  products, our UI/UX process focuses on usability,
-                  responsive layouts, visual consistency and clear actions.
-                </p>
-              </Reveal>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =====================================================
-          SHOWCASE
-      ===================================================== */}
-      <section
-        className="ux-showcase"
-        aria-label="UI UX interface design showcase"
-      >
-        <div
-          className="ux-showcase-image"
-          role="img"
-          aria-label="Modern mobile user interface and user experience design by NexKripa IT INDIA"
-        />
-
-        <div className="ux-showcase-copy">
-          <Reveal>
-            <span className="ux-kicker">
-              INTERFACE DESIGN
-            </span>
-
-            <h2>
-              EVERY SCREEN
-              <br />
-              HAS A <em>PURPOSE.</em>
-            </h2>
-          </Reveal>
-
-          <Reveal delay={0.08}>
-            <p>
-              We make visual decisions around usability first — what users
-              need to notice, understand and act on — then shape typography,
-              spacing, hierarchy and interaction around that flow.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* =====================================================
-          DELIVERABLES
-      ===================================================== */}
-      <section className="ux-deliverables">
-        <div className="ux-container">
-          <Reveal>
-            <div className="ux-section-head">
-              <span className="ux-kicker">
-                UI/UX DESIGN DELIVERABLES
-              </span>
-
-              <h2>
-                FROM FLOW
-                <br />
-                TO <em>FINAL UI.</em>
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="ux-grid">
-            {deliverables.map(([number, title, text], index) => (
-              <Reveal
-                key={number}
-                delay={index * 0.045}
-              >
-                <article className="ux-card">
-                  <span>{number}</span>
-
-                  <div className="ux-line" />
-
-                  <h3>{title}</h3>
-
-                  <p>{text}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =====================================================
-          DASHBOARD / PRODUCT DESIGN
-      ===================================================== */}
-      <section className="ux-dashboard">
-        <div className="ux-container ux-dashboard-grid">
-          <Reveal>
-            <div className="ux-dashboard-copy">
-              <span className="ux-kicker">
-                PRODUCT & DASHBOARD DESIGN
-              </span>
-
-              <h2>
-                COMPLEX DATA.
-                <br />
-                <em>CLEAR INTERFACE.</em>
-              </h2>
-
+            <Reveal delay={0.08}>
               <p>
-                Dashboards and product interfaces can contain a lot of
-                information. We organize content into clear priorities so
-                users can scan, compare, understand and act efficiently.
+                We make visual decisions around usability first — what users
+                need to notice, understand and act on — then shape typography,
+                spacing, hierarchy and interaction around that flow.
               </p>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* =====================================================
+            DELIVERABLES
+        ===================================================== */}
+        <section className="ux-deliverables">
+          <div className="ux-container">
+            <Reveal>
+              <div className="ux-section-head">
+                <span className="ux-kicker">
+                  UI/UX DESIGN DELIVERABLES
+                </span>
+
+                <h2>
+                  FROM FLOW
+                  <br />
+                  TO <em>FINAL UI.</em>
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="ux-grid">
+              {deliverables.map(([number, title, text], index) => (
+                <Reveal
+                  key={number}
+                  delay={index * 0.045}
+                >
+                  <article className="ux-card">
+                    <span>{number}</span>
+
+                    <div className="ux-line" />
+
+                    <h3>{title}</h3>
+
+                    <p>{text}</p>
+                  </article>
+                </Reveal>
+              ))}
             </div>
-          </Reveal>
+          </div>
+        </section>
 
-          <Reveal delay={0.08}>
-            <div
-              className="ux-dashboard-image"
-              role="img"
-              aria-label="Dashboard UI UX design created by NexKripa IT INDIA"
-            />
-          </Reveal>
-        </div>
-      </section>
+        {/* =====================================================
+            DASHBOARD
+        ===================================================== */}
+        <section className="ux-dashboard">
+          <div className="ux-container ux-dashboard-grid">
+            <Reveal>
+              <div className="ux-dashboard-copy">
+                <span className="ux-kicker">
+                  PRODUCT & DASHBOARD DESIGN
+                </span>
 
-      {/* =====================================================
-          PROCESS
-      ===================================================== */}
-      <section className="ux-process">
-        <div className="ux-container">
-          <Reveal>
-            <div className="ux-section-head">
-              <span className="ux-kicker">
-                OUR UI/UX PROCESS
-              </span>
+                <h2>
+                  COMPLEX DATA.
+                  <br />
+                  <em>CLEAR INTERFACE.</em>
+                </h2>
 
-              <h2>
-                THINK FIRST.
-                <br />
-                <em>DESIGN SECOND.</em>
-              </h2>
+                <p>
+                  Dashboards and product interfaces can contain a lot of
+                  information. We organize content into clear priorities so
+                  users can scan, compare, understand and act efficiently.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.08}>
+              <div
+                className="ux-dashboard-image"
+                role="img"
+                aria-label="Dashboard UI UX design created by NexKripa IT INDIA"
+              />
+            </Reveal>
+          </div>
+        </section>
+
+        {/* =====================================================
+            PROCESS
+        ===================================================== */}
+        <section className="ux-process">
+          <div className="ux-container">
+            <Reveal>
+              <div className="ux-section-head">
+                <span className="ux-kicker">
+                  OUR UI/UX PROCESS
+                </span>
+
+                <h2>
+                  THINK FIRST.
+                  <br />
+                  <em>DESIGN SECOND.</em>
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="ux-process-list">
+              {process.map(([number, title, text], index) => (
+                <Reveal
+                  key={number}
+                  delay={index * 0.04}
+                >
+                  <article className="ux-process-row">
+                    <span className="ux-num">
+                      {number}
+                    </span>
+
+                    <h3>{title}</h3>
+
+                    <p>{text}</p>
+
+                    <i />
+                  </article>
+                </Reveal>
+              ))}
             </div>
-          </Reveal>
+          </div>
+        </section>
 
-          <div className="ux-process-list">
-            {process.map(([number, title, text], index) => (
-              <Reveal
-                key={number}
-                delay={index * 0.04}
+        {/* =====================================================
+            RELATED SERVICES
+        ===================================================== */}
+        <section className="ux-related">
+          <div className="ux-container">
+            <Reveal>
+              <div className="ux-section-head">
+                <span className="ux-kicker">
+                  EXPLORE MORE
+                </span>
+
+                <h2>
+                  DESIGN CONNECTED
+                  <br />
+                  TO <em>TECHNOLOGY.</em>
+                </h2>
+              </div>
+            </Reveal>
+
+            <div className="ux-related-grid">
+
+              <Link
+                href="/services/website"
+                className="ux-related-link"
               >
-                <article className="ux-process-row">
-                  <span className="ux-num">
-                    {number}
-                  </span>
+                <span>01</span>
 
-                  <h3>{title}</h3>
+                <div>
+                  <h3>Web Development</h3>
+                  <p>
+                    Turn your UI/UX direction into a responsive,
+                    production-ready website.
+                  </p>
+                </div>
 
-                  <p>{text}</p>
+                <b>↗</b>
+              </Link>
 
-                  <i />
-                </article>
-              </Reveal>
-            ))}
+              <Link
+                href="/services/crm"
+                className="ux-related-link"
+              >
+                <span>02</span>
+
+                <div>
+                  <h3>CRM Development</h3>
+                  <p>
+                    Build clear business interfaces and customer management
+                    systems around real workflows.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+              <Link
+                href="/portfolio"
+                className="ux-related-link"
+              >
+                <span>03</span>
+
+                <div>
+                  <h3>Our Portfolio</h3>
+                  <p>
+                    Explore digital experiences and projects created by
+                    NexKripa IT INDIA.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+              <Link
+                href="/contact"
+                className="ux-related-link"
+              >
+                <span>04</span>
+
+                <div>
+                  <h3>Start a UI/UX Project</h3>
+                  <p>
+                    Tell us about your website, dashboard, app or product
+                    design requirements.
+                  </p>
+                </div>
+
+                <b>↗</b>
+              </Link>
+
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* =====================================================
-          INTERNAL LINKS / RELATED SERVICES
-      ===================================================== */}
-      <section className="ux-related">
-        <div className="ux-container">
-          <Reveal>
-            <div className="ux-section-head">
+        {/* =====================================================
+            CTA
+        ===================================================== */}
+        <section className="ux-cta">
+          <div className="ux-container">
+            <Reveal>
               <span className="ux-kicker">
-                EXPLORE MORE
+                HAVE A PRODUCT IDEA?
               </span>
 
               <h2>
-                DESIGN CONNECTED
+                LET&apos;S MAKE IT
                 <br />
-                TO <em>TECHNOLOGY.</em>
+                SIMPLE TO
+                <br />
+                <em>USE.</em>
               </h2>
-            </div>
-          </Reveal>
 
-          <div className="ux-related-grid">
-
-            <Link
-              href="/services/website"
-              className="ux-related-link"
-            >
-              <span>01</span>
-
-              <div>
-                <h3>Web Development</h3>
-
-                <p>
-                  Turn your UI/UX direction into a responsive,
-                  production-ready website.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
-            <Link
-              href="/services/crm"
-              className="ux-related-link"
-            >
-              <span>02</span>
-
-              <div>
-                <h3>CRM Development</h3>
-
-                <p>
-                  Build clear business interfaces and customer management
-                  systems around real workflows.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
-            <Link
-              href="/portfolio"
-              className="ux-related-link"
-            >
-              <span>03</span>
-
-              <div>
-                <h3>Our Portfolio</h3>
-
-                <p>
-                  Explore digital experiences and projects created by
-                  NexKripa IT INDIA.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
-            <Link
-              href="/contact"
-              className="ux-related-link"
-            >
-              <span>04</span>
-
-              <div>
-                <h3>Start a UI/UX Project</h3>
-
-                <p>
-                  Tell us about your website, dashboard, app or product
-                  design requirements.
-                </p>
-              </div>
-
-              <b>↗</b>
-            </Link>
-
+              <Link
+                href="/contact"
+                className="ux-cta-link"
+              >
+                START A PROJECT
+                <span>↗</span>
+              </Link>
+            </Reveal>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* =====================================================
-          CTA
-      ===================================================== */}
-      <section className="ux-cta">
-        <div className="ux-container">
-          <Reveal>
-            <span className="ux-kicker">
-              HAVE A PRODUCT IDEA?
-            </span>
-
-            <h2>
-              LET&apos;S MAKE IT
-              <br />
-              SIMPLE TO
-              <br />
-              <em>USE.</em>
-            </h2>
-
-            <Link
-              href="/contact"
-              className="ux-cta-link"
-            >
-              START A PROJECT
-              <span>↗</span>
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-    </main>
+      </main>
+    </>
   );
 }

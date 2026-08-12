@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 
 const projectTypes = [
   "WEBSITE",
+  "REDESIGN",
   "UI / UX",
   "BRANDING",
   "AI AUTOMATION",

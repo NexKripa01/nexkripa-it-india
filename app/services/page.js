@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ServicesInteractiveGrid from "@/components/ServicesInteractiveGrid";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata = {
   title: "Digital Services in Mumbai",
@@ -28,10 +29,14 @@ export const metadata = {
 
   openGraph: {
     title: "Digital Services in Mumbai | NexKripa IT INDIA",
+
     description:
       "Web development, UI/UX, AI automation, CRM, e-commerce, branding, database maintenance and IT consultancy services for businesses and startups.",
+
     url: "/services",
+
     siteName: "NexKripa",
+
     type: "website",
 
     images: [
@@ -46,9 +51,12 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
+
     title: "Digital Services in Mumbai | NexKripa IT INDIA",
+
     description:
       "Web development, AI automation, UI/UX, CRM, branding and digital solutions by NexKripa IT INDIA.",
+
     images: ["/og-image.png"],
   },
 };
@@ -56,72 +64,92 @@ export const metadata = {
 const serviceLinks = [
   {
     number: "01",
-    title: "Web Development",
+    title: "Web Redesign & Development",
     text:
       "Modern, responsive and performance-focused websites for businesses, startups and professionals.",
     href: "/services/website",
   },
   {
     number: "02",
+    title: "Web Development",
+    text:
+      "Modern, responsive and performance-focused websites for businesses, startups and professionals.",
+    href: "/services/website",
+  },
+  {
+    number: "03",
     title: "UI / UX Design",
     text:
       "User-focused interfaces for websites, dashboards and digital products.",
     href: "/services/ui-ux",
   },
   {
-    number: "03",
+    number: "04",
     title: "AI Automation",
     text:
       "Workflow automation, AI assistants, integrations and smarter business operations.",
     href: "/services/ai-automation",
   },
   {
-    number: "04",
+    number: "05",
     title: "CRM Development",
     text:
       "Custom CRM solutions for lead management, customer tracking and business workflows.",
     href: "/services/crm",
   },
   {
-    number: "05",
+    number: "06",
     title: "E-Commerce Development",
     text:
       "Online stores, product catalogs, checkout flows and order management solutions.",
     href: "/services/e-commerce",
   },
   {
-    number: "06",
+    number: "07",
     title: "Personal Branding",
     text:
       "Personal brand strategy, digital presence and websites for founders, professionals and creators.",
     href: "/services/personal-branding",
   },
-  {
-    number: "07",
-    title: "Corporate Branding",
-    text:
-      "Brand identity and visual systems for businesses, companies and growing organizations.",
-    href: "/services/corporate-branding",
-  },
-  {
-    number: "08",
-    title: "Database Maintenance",
-    text:
-      "Database support, organization, maintenance and reliability for business systems.",
-    href: "/services/database-maintenance",
-  },
-  {
-    number: "09",
-    title: "IT Consultancy",
-    text:
-      "Technology guidance and practical digital solutions based on business requirements.",
-    href: "/services/it-consultancy",
-  },
+  // {
+  //   number: "07",
+  //   title: "Corporate Branding",
+  //   text:
+  //     "Brand identity and visual systems for businesses, companies and growing organizations.",
+  //   href: "/services/corporate-branding",
+  // },
+  // {
+  //   number: "08",
+  //   title: "Database Maintenance",
+  //   text:
+  //     "Database support, organization, maintenance and reliability for business systems.",
+  //   href: "/services/database-maintenance",
+  // },
+  // {
+  //   number: "09",
+  //   title: "IT Consultancy",
+  //   text:
+  //     "Technology guidance and practical digital solutions based on business requirements.",
+  //   href: "/services/it-consultancy",
+  // },
 ];
 
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://www.nexkripa.in/",
+          },
+          {
+            name: "Services",
+            url: "https://www.nexkripa.in/services",
+          },
+        ]}
+      />
+
       <ServicesInteractiveGrid />
 
       {/* SEO + INTERNAL LINKING SECTION */}

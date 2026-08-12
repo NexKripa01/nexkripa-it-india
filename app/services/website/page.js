@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata = {
   title: "Web Development Services in Mumbai",
@@ -145,6 +146,23 @@ const tech = [
 export default function WebsiteServicePage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          {
+            name: "Home",
+            url: "https://www.nexkripa.in/",
+          },
+          {
+            name: "Services",
+            url: "https://www.nexkripa.in/services",
+          },
+          {
+            name: "Web Development",
+            url: "https://www.nexkripa.in/services/website",
+          },
+        ]}
+      />
+
       <main className="web-service-page">
 
         {/* =====================================================

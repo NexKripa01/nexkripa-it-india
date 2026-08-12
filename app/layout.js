@@ -1,79 +1,83 @@
 import "./globals.css";
+
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
+import DemoWatermark from "@/components/DemoWatermark";
 
 export const metadata = {
   metadataBase: new URL("https://www.nexkripa.in"),
 
   title: {
-    default: "NexKripa IT INDIA | Web Development, AI & Digital Solutions",
-    template: "%s | NexKripa IT INDIA",
+    default: "NexKripa | Web Development, AI & Digital Solutions",
+    template: "%s | NexKripa",
   },
 
   description:
-    "NexKripa IT INDIA provides web development, UI/UX design, AI automation, CRM, branding, e-commerce, database maintenance and IT consultancy services for businesses and startups.",
+    "NexKripa IT INDIA is a Mumbai-based digital technology company providing web development, UI/UX design, AI automation, CRM, e-commerce, branding, database maintenance and IT consultancy services.",
 
-  keywords: [
-    "NexKripa",
-    "NexKripa IT INDIA",
-    "NexKripa India",
-    "Web Development Company India",
-    "Web Development Mumbai",
-    "AI Automation Services",
-    "UI UX Design",
-    "CRM Development",
-    "E-Commerce Development",
-    "Corporate Branding",
-    "Personal Branding",
-    "Database Maintenance",
-    "IT Consultancy",
-    "Digital Solutions India",
+  authors: [
+    {
+      name: "NexKripa IT INDIA",
+    },
   ],
 
-  authors: [{ name: "NexKripa IT INDIA" }],
   creator: "NexKripa IT INDIA",
+
   publisher: "NexKripa IT INDIA",
+
   applicationName: "NexKripa",
+
   category: "Technology",
 
-  alternates: {
-    canonical: "/",
-  },
-
   openGraph: {
-    title: "NexKripa IT INDIA | Web Development, AI & Digital Solutions",
+    title: "NexKripa | Web Development, AI & Digital Solutions",
+
     description:
-      "Modern websites, AI automation, CRM, branding, UI/UX, e-commerce and IT solutions for businesses and startups.",
-    url: "https://www.nexkripa.in",
+      "NexKripa IT INDIA builds modern websites, AI automation systems, CRM solutions, UI/UX experiences, e-commerce platforms and digital solutions.",
+
+    url: "https://www.nexkripa.in/",
+
     siteName: "NexKripa",
+
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "NexKripa IT INDIA",
+        alt: "NexKripa IT INDIA - Web Development, AI and Digital Solutions",
       },
     ],
+
     locale: "en_IN",
+
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "NexKripa IT INDIA | Web Development, AI & Digital Solutions",
+
+    title: "NexKripa | Web Development, AI & Digital Solutions",
+
     description:
-      "Web development, AI automation, branding, CRM, UI/UX and digital solutions.",
+      "Web development, AI automation, CRM, UI/UX, branding and digital solutions by NexKripa IT INDIA.",
+
     images: ["/og-image.png"],
   },
 
   robots: {
     index: true,
+
     follow: true,
+
     googleBot: {
       index: true,
+
       follow: true,
+
       "max-video-preview": -1,
+
       "max-image-preview": "large",
+
       "max-snippet": -1,
     },
   },
@@ -89,7 +93,9 @@ export const metadata = {
         type: "image/png",
       },
     ],
+
     shortcut: "/favicon.ico",
+
     apple: "/apple-touch-icon.png",
   },
 
@@ -100,27 +106,56 @@ export const metadata = {
 
 const websiteSchema = {
   "@context": "https://schema.org",
+
   "@type": "WebSite",
+
   name: "NexKripa",
+
   alternateName: [
     "NexKripa IT INDIA",
     "NexKripa India",
     "nexkripa.in",
   ],
+
   url: "https://www.nexkripa.in/",
 };
 
 const organizationSchema = {
   "@context": "https://schema.org",
+
   "@type": "Organization",
-  name: "NexKripa IT INDIA",
-  alternateName: "NexKripa",
+
+  name: "NexKripa",
+
+  alternateName: [
+    "NexKripa IT INDIA",
+    "NexKripa India",
+  ],
+
+  legalName: "NexKripa IT INDIA",
+
   url: "https://www.nexkripa.in/",
-  logo: "https://www.nexkripa.in/icon.png",
+
+  logo: {
+    "@type": "ImageObject",
+
+    url: "https://www.nexkripa.in/new-logo.png",
+
+    contentUrl: "https://www.nexkripa.in/new-logo.png",
+  },
+
+  image: "https://www.nexkripa.in/og-image.png",
+
+  description:
+    "NexKripa IT INDIA is a Mumbai-based digital technology company providing web development, AI automation, UI/UX design, CRM, e-commerce, branding and IT solutions.",
+
   sameAs: [
     "https://www.instagram.com/nexkripa/",
+
     "https://www.linkedin.com/company/137494032/",
+
     "https://github.com/NexKripa01",
+
     "https://youtube.com/@nexkripaitindia",
   ],
 };
@@ -148,6 +183,8 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
 
         <SiteFooter />
+
+        <DemoWatermark />
       </body>
     </html>
   );
