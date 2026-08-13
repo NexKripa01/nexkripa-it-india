@@ -11,6 +11,7 @@ const menuItems = [
   { label: "SERVICES", href: "/services" },
   { label: "CLIENTELE", href: "/clientele" },
   { label: "DEMOS", href: "/demos" },
+  { label: "DEMO ACCESS", href: "/demo-access" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -145,6 +146,9 @@ export default function Navbar() {
         pathname.startsWith("/demos/")
       );
     }
+    if (href === "/demo-access") {
+  return pathname === "/demo-access";
+}
 
     return pathname === href;
   };
