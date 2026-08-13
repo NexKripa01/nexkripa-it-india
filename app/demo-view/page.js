@@ -1,11 +1,11 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import DemoViewer from "@/components/DemoViewer";
 
-export default function DemoViewPage() {
+function DemoViewContent() {
   const searchParams = useSearchParams();
-
   const demoUrl = searchParams.get("url");
 
   if (!demoUrl) {
@@ -25,10 +25,28 @@ export default function DemoViewPage() {
     );
   }
 
+  return <DemoViewer title="Website Demo" demoUrl={demoUrl} />;
+}
+
+export default function DemoViewPage() {
   return (
-    <DemoViewer
-      title="Website Demo"
-      demoUrl={demoUrl}
-    />
+    <Suspense
+      fallback={
+        <main
+          style={{
+            minHeight: "100vh",
+            background: "#07090b",
+            color: "#fff",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          Loading demo...
+        </main>
+      }
+    >
+      <DemoViewContent />
+    </Suspense>
   );
 }
