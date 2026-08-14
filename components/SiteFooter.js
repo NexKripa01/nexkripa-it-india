@@ -136,8 +136,20 @@ export default function SiteFooter() {
         </p>
 
         <div>
-          <Link href="/privacy-policy">
-            Privacy Policy
+        <Link href="/privacy-policy">
+          Privacy Policy
+        </Link>
+        </div>
+
+        <div>
+          <Link href="/faq">
+            FAQ
+          </Link>
+        </div>
+
+        <div>
+          <Link href="/blog">
+            Blog
           </Link>
         </div>
 

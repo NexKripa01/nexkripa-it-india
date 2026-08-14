@@ -356,12 +356,12 @@ export default function PrivacyPolicyPage() {
                       </strong>
 
                       <span>
-                        Mumbai, Maharashtra, India
+                        Andheri(w) Mumbai, Maharashtra, India
                       </span>
 
-                      <a href="mailto:hello@nexkripa.com">
-                        hello@nexkripa.com
-                      </a>
+                     <a href="mailto:nexkripa@gmail.com">
+                         nexkripa@gmail.com
+                    </a>
                     </div>
                   </div>
                 </div>
