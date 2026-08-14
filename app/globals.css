@@ -19494,3 +19494,123 @@ img.ref-footer-logo-image {
 .demo-admin-approved-link a:hover {
   color: #ff7b9b;
 }
+
+.demo-by-nexkripa {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.demo-by-nexkripa strong {
+  margin-left: 4px;
+  color: #ff4fa3;
+}
+
+
+
+/* ======================================================
+   MOBILE NAV FIX - SHOW ALL 8 MENU ITEMS
+====================================================== */
+
+@media (max-width: 600px) {
+
+  /* Full menu ko scrollable rakho */
+  .ref-menu-overlay {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ref-menu-columns {
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+
+    width: 100% !important;
+
+    /* fixed 100% height hatao */
+    height: auto !important;
+    min-height: 100vh !important;
+
+    padding:
+      145px 28px 80px !important;
+
+    column-gap: 26px !important;
+    row-gap: 48px !important;
+
+    align-content: start !important;
+  }
+
+  .ref-menu-column {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    height: auto !important;
+    min-height: 65px !important;
+
+    padding: 0 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    border: 0 !important;
+    background: transparent !important;
+
+    text-align: left !important;
+  }
+
+  .ref-menu-column span {
+    position: static !important;
+
+    inset: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+
+    font-family: Manrope, sans-serif !important;
+
+    font-size:
+      clamp(31px, 8.6vw, 39px) !important;
+
+    font-weight: 500 !important;
+
+    line-height: 0.98 !important;
+
+    letter-spacing: -0.035em !important;
+
+    color: transparent !important;
+
+    -webkit-text-stroke:
+      1px #ffffff !important;
+
+    text-align: left !important;
+
+    white-space: normal !important;
+
+    text-transform: uppercase !important;
+  }
+
+  .ref-menu-column.is-active span {
+    color: #ff3d61 !important;
+
+    -webkit-text-stroke: 0 !important;
+  }
+
+  /* CONTACT ko koi special grid position mat do */
+  .ref-menu-column:last-child {
+    grid-column: auto !important;
+  }
+}
+

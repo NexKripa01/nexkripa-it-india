@@ -1,7 +1,6 @@
 import "./globals.css";
 
-import Navbar from "@/components/Navbar";
-import SiteFooter from "@/components/SiteFooter";
+import SiteChrome from "@/components/SiteChrome";
 import DemoWatermark from "@/components/DemoWatermark";
 
 export const metadata = {
@@ -178,11 +177,9 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        <Navbar />
-
-        <main>{children}</main>
-
-        <SiteFooter />
+        <SiteChrome>
+          {children}
+        </SiteChrome>
 
         <DemoWatermark />
       </body>

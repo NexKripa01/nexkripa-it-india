@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 export default function DemoWatermark() {
   const pathname = usePathname();
 
-  if (!pathname.startsWith("/demos/")) {
+  if (!pathname?.startsWith("/demo-view")) {
     return null;
   }
 
