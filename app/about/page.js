@@ -59,17 +59,17 @@ const teamMembers = [
   },
   {
     number: "03",
+    name: "Nakul Jaiswal",
+    role: "CEO",
+    work: "DATABASE MANAGEMENT ",
+    image: "/team/nakul.png",
+  },
+  {
+    number: "04",
     name: "Aaryan Saroj",
     role: "MEMBER",
     work: "SOCIAL-MEDIA HANDELING",
     image: "/team/aaryan.png",
-  },
-  {
-    number: "04",
-    name: "Nakul Jaiswal",
-    role: "MEMBER",
-    work: "DATABASE MANAGEMENT ",
-    image: "/team/nakul.png",
   },
 ];
 
@@ -199,52 +199,6 @@ export default function AboutPage() {
           </Reveal>
 
           <TeamSlider members={teamMembers} />
-        </div>
-      </section>
-
-      {/* ======================================
-          ORIGINAL ABOUT HERO
-      ====================================== */}
-
-      <section className="nk-about-hero">
-        <div className="nk-about-hero-main">
-          <div className="nk-about-hero-copy">
-            <span className="nk-about-kicker">
-              ABOUT NEXKRIPA IT INDIA
-            </span>
-
-            <h1>
-              <span>WE BUILD</span>
-              <span>
-                WITH <em>INTENT.</em>
-              </span>
-            </h1>
-
-            <p>
-              A digital technology studio combining design, development and
-              intelligent solutions to turn ambitious ideas into useful digital
-              experiences.
-            </p>
-          </div>
-
-          <div className="nk-about-mark" aria-hidden="true">
-            <div className="nk-about-orbit nk-about-orbit-one" />
-            <div className="nk-about-orbit nk-about-orbit-two" />
-            <div className="nk-about-orbit nk-about-orbit-three" />
-
-            <strong>GV</strong>
-
-            <span>
-              DIGITAL · TECHNOLOGY · INDIA
-            </span>
-          </div>
-        </div>
-
-        <div className="nk-about-hero-bottom">
-          <span>01 / ABOUT</span>
-          <span className="nk-about-scroll">
-            SCROLL TO EXPLORE ↓
-          </span>
         </div>
       </section>
 
