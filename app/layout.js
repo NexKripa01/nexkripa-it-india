@@ -2,6 +2,7 @@ import "./globals.css";
 
 import SiteChrome from "@/components/SiteChrome";
 import DemoWatermark from "@/components/DemoWatermark";
+import NexKripaChatbot from "@/components/NexKripaChatbot";
 
 export const metadata = {
   metadataBase: new URL("https://www.nexkripa.in"),
@@ -182,6 +183,9 @@ export default function RootLayout({ children }) {
         </SiteChrome>
 
         <DemoWatermark />
+
+        {/* GLOBAL CHATBOT */}
+        <NexKripaChatbot />
       </body>
     </html>
   );

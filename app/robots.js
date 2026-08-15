@@ -4,10 +4,19 @@ export default function robots() {
   return {
     rules: {
       userAgent: "*",
+
       allow: "/",
+
+      disallow: [
+        "/admin",
+        "/admin/",
+        "/demo-view",
+        "/api/chatbot",
+      ],
     },
 
     sitemap: `${baseUrl}/sitemap.xml`,
+
     host: baseUrl,
   };
 }

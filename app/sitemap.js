@@ -70,6 +70,16 @@ export default function sitemap() {
     },
 
     // =========================================================
+    // DEMO ACCESS
+    // =========================================================
+    {
+      url: `${baseUrl}/demo-access`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+
+    // =========================================================
     // SERVICES HUB
     // =========================================================
     {
@@ -240,6 +250,106 @@ export default function sitemap() {
       images: [
         `${baseUrl}/clients/pujadham-client.png`,
       ],
+    },
+
+    // =========================================================
+    // PRICING
+    // =========================================================
+    {
+      url: `${baseUrl}/pricing`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+
+    // =========================================================
+    // FAQ
+    // =========================================================
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+
+    // =========================================================
+    // BLOG
+    // =========================================================
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+
+    // =========================================================
+    // BLOG - WEBSITE
+    // =========================================================
+    {
+      url: `${baseUrl}/blog/website`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+
+    // =========================================================
+    // BLOG - REDESIGN
+    // =========================================================
+    {
+      url: `${baseUrl}/blog/redesign`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+
+    // =========================================================
+    // BLOG - PERSONAL BRANDING
+    // =========================================================
+    {
+      url: `${baseUrl}/blog/personal-branding`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+
+    // =========================================================
+    // BLOG - UI/UX
+    // =========================================================
+    {
+      url: `${baseUrl}/blog/ui-ux`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+
+    // =========================================================
+    // BLOG - CRM
+    // =========================================================
+    {
+      url: `${baseUrl}/blog/crm`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+
+    // =========================================================
+    // BLOG - AI AUTOMATION
+    // =========================================================
+    {
+      url: `${baseUrl}/blog/ai-automation`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+
+    // =========================================================
+    // BLOG - E-COMMERCE
+    // =========================================================
+    {
+      url: `${baseUrl}/blog/ecommerce`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
 
     // =========================================================

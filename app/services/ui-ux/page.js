@@ -41,7 +41,7 @@ export const metadata = {
 
     images: [
       {
-        url: "/og-image.png",
+        url: "/new-logo.png",
         width: 1200,
         height: 630,
         alt: "NexKripa IT INDIA UI UX Design Services",
@@ -57,7 +57,7 @@ export const metadata = {
     description:
       "Modern UI/UX design for websites, dashboards and digital products.",
 
-    images: ["/og-image.png"],
+    images: ["/new-logo.png"],
   },
 };
 

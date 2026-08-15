@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { BotMessageSquare } from "lucide-react";
 
 const menuItems = [
   { label: "ABOUT", href: "/about" },
@@ -66,33 +67,28 @@ export default function Navbar() {
 
       clearHideTimer();
 
-      // Top of page
       if (currentScrollY <= 30) {
         setNavbarVisible(true);
         lastScrollY.current = currentScrollY;
         return;
       }
 
-      // Menu open hai to navbar always visible
       if (open) {
         setNavbarVisible(true);
         lastScrollY.current = currentScrollY;
         return;
       }
 
-      // User scrolls UP
       if (currentScrollY < previousScrollY) {
         setNavbarVisible(true);
       }
 
-      // User scrolls DOWN
       if (currentScrollY > previousScrollY) {
         setNavbarVisible(false);
       }
 
       lastScrollY.current = currentScrollY;
 
-      // User rukne ke 2 sec baad hide
       startHideTimer();
     };
 
@@ -133,6 +129,14 @@ export default function Navbar() {
     setOpen((value) => !value);
   };
 
+  const openAssistant = () => {
+    setNavbarVisible(true);
+
+    window.dispatchEvent(
+      new Event("open-nexkripa-chatbot")
+    );
+  };
+
   const checkActive = (href) => {
     if (href === "/services") {
       return (
@@ -147,9 +151,11 @@ export default function Navbar() {
         pathname.startsWith("/demos/")
       );
     }
+
     if (href === "/demo-access") {
-  return pathname === "/demo-access";
-}
+      return pathname === "/demo-access";
+    }
+
     if (href === "/pricing") {
       return pathname === "/pricing";
     }
@@ -182,32 +188,41 @@ export default function Navbar() {
               priority
               className="ref-nav-symbol"
             />
-
-            {/* <span className="ref-nav-wordmark">
-              <strong>NexKripa</strong>
-
-              <span className="ref-nav-subtitle">
-                <i />
-                IT INDIA
-                <i />
-              </span>
-            </span> */}
           </Link>
 
-          {/* HAMBURGER */}
-          <button
-            type="button"
-            className={`ref-hamburger ${
-              open ? "is-open" : ""
-            }`}
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            onClick={toggleMenu}
-          >
-            <span className="ref-ham-top" />
-            <span className="ref-ham-middle" />
-            <span className="ref-ham-bottom" />
-          </button>
+          {/* RIGHT SIDE ACTIONS */}
+          <div className="ref-nav-actions">
+
+            {/* MOBILE AI ASSISTANT */}
+            <button
+  type="button"
+  className="nk-mobile-assistant"
+  onClick={() => {
+    window.dispatchEvent(
+      new Event("open-nexkripa-chatbot")
+    );
+  }}
+  aria-label="Open NexKripa AI Assistant"
+>
+  <BotMessageSquare size={26} strokeWidth={2} />
+</button>
+
+            {/* HAMBURGER */}
+            <button
+              type="button"
+              className={`ref-hamburger ${
+                open ? "is-open" : ""
+              }`}
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+              onClick={toggleMenu}
+            >
+              <span className="ref-ham-top" />
+              <span className="ref-ham-middle" />
+              <span className="ref-ham-bottom" />
+            </button>
+
+          </div>
 
         </div>
       </header>
