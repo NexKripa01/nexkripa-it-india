@@ -21220,3 +21220,24 @@ img.ref-footer-logo-image {
     flex-shrink: 0 !important;
   }
 }
+/* =====================================
+   CHATBOT SCROLL LOCK
+===================================== */
+
+.nk-chatbot-box {
+  overscroll-behavior: contain;
+}
+
+.nk-chatbot-messages {
+  overscroll-behavior-y: contain;
+  touch-action: pan-y;
+}
+@media (max-width: 768px) {
+  .nk-chatbot-box {
+    overscroll-behavior: none;
+  }
+
+  .nk-chatbot-messages {
+    overscroll-behavior-y: contain;
+  }
+}

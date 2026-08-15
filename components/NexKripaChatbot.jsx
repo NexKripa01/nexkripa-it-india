@@ -562,23 +562,20 @@ export default function NexKripaChatbot() {
 
             <div className="nk-chatbot-header-actions">
 
-              {!showContactForm &&
-                messages.length > 1 && (
-                  <button
-                    type="button"
-                    className="nk-chatbot-reset"
-                    onClick={
-                      resetChat
-                    }
-                    aria-label="Start new chat"
-                    title="New Chat"
-                  >
-                    <RotateCcw
-                      size={18}
-                      strokeWidth={2}
-                    />
-                  </button>
-                )}
+              {!showContactForm && (
+                <button
+                  type="button"
+                  className="nk-chatbot-reset"
+                  onClick={resetChat}
+                  aria-label="Start new chat"
+                  title="New Chat"
+                >
+                  <RotateCcw
+                    size={18}
+                    strokeWidth={2}
+                  />
+                </button>
+              )}
 
               <button
                 type="button"
@@ -700,7 +697,7 @@ export default function NexKripaChatbot() {
                     <div className="nk-quick-wrapper">
 
                       <p className="nk-quick-title">
-                        You can ask me
+                        You can ask ai
                       </p>
 
                       <div className="nk-quick-questions">
