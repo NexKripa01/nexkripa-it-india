@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BotMessageSquare } from "lucide-react";
 
 const menuItems = [
   { label: "ABOUT", href: "/about" },
@@ -195,17 +194,20 @@ export default function Navbar() {
 
             {/* MOBILE AI ASSISTANT */}
             <button
-  type="button"
-  className="nk-mobile-assistant"
-  onClick={() => {
-    window.dispatchEvent(
-      new Event("open-nexkripa-chatbot")
-    );
-  }}
-  aria-label="Open NexKripa AI Assistant"
->
-  <BotMessageSquare size={26} strokeWidth={2} />
-</button>
+              type="button"
+              className="nk-mobile-assistant"
+              onClick={openAssistant}
+              aria-label="Open NexKripa AI Assistant"
+            >
+              <Image
+                src="/aichatgpt.png"
+                alt="NexKripa AI Assistant"
+                width={30}
+                height={30}
+                className="nk-mobile-assistant-image"
+                priority
+              />
+            </button>
 
             {/* HAMBURGER */}
             <button

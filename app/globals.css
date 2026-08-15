@@ -20140,6 +20140,28 @@ img.ref-footer-logo-image {
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
+/* =====================================
+   DESKTOP AI ASSISTANT BUTTON
+===================================== */
+
+.nk-chatbot-floating-btn {
+  background: #111111 !important;
+  color: #ffffff !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nk-ai-floating-image {
+  width: 38px !important;
+  height: 38px !important;
+
+  object-fit: contain;
+  display: block;
+}
 
 .nk-chatbot-floating-btn:hover {
   transform: translateY(-3px);
@@ -20175,6 +20197,7 @@ img.ref-footer-logo-image {
 
   animation: nkChatOpen 0.25s ease;
 }
+
 
 @keyframes nkChatOpen {
   from {
@@ -20339,15 +20362,39 @@ img.ref-footer-logo-image {
     height: 54px;
   }
 
+  @media (max-width: 768px) {
   .nk-chatbot-box {
-    width: calc(100% - 24px);
-    height: 70vh;
+    position: fixed;
 
-    right: 12px;
-    bottom: 85px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-    border-radius: 16px;
+    width: 100%;
+    height: 100dvh;
+
+    max-width: none;
+    max-height: none;
+
+    border-radius: 0;
+
+    z-index: 20000;
   }
+
+  .nk-chatbot-header {
+    flex-shrink: 0;
+  }
+
+  .nk-chatbot-messages {
+    flex: 1;
+    min-height: 0;
+  }
+
+  .nk-chatbot-input-area {
+    flex-shrink: 0;
+  }
+}
 
   .nk-chatbot-header {
     min-height: 68px;
@@ -20599,8 +20646,10 @@ img.ref-footer-logo-image {
 
   border-radius: 10px;
 
-  background: #ffffff;
-  color: #080808;
+  background: #181818;
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .nk-message-row {
@@ -21077,5 +21126,90 @@ img.ref-footer-logo-image {
     font-size: 13px;
 
     line-height: 1.65;
+  }
+}
+/* =====================================
+   NEXKRIPA AI CHAT IMAGE
+===================================== */
+
+.nk-ai-chat-image,
+.nk-ai-message-image,
+.nk-ai-floating-image {
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.nk-ai-chat-image {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.nk-ai-message-image {
+  width: 19px !important;
+  height: 19px !important;
+}
+
+.nk-ai-floating-image {
+  width: 38px !important;
+  height: 38px !important;
+}
+.nk-mobile-assistant-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+/* =====================================
+   FINAL MOBILE CHATBOT FULL SCREEN FIX
+===================================== */
+
+@media (max-width: 768px) {
+  .nk-chatbot-box {
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    width: 100vw !important;
+    height: 100dvh !important;
+
+    min-width: 100vw !important;
+    min-height: 100dvh !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    z-index: 999999 !important;
+
+    overflow: hidden !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .nk-chatbot-header {
+    flex-shrink: 0 !important;
+  }
+
+  .nk-chatbot-messages {
+    flex: 1 !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+  }
+
+  .nk-chatbot-input-area {
+    flex-shrink: 0 !important;
   }
 }

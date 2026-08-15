@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 import {
-  BotMessageSquare,
   Send,
   X,
   ArrowLeft,
@@ -42,6 +42,32 @@ const INITIAL_MESSAGES = [
 
 const CHAT_STORAGE_KEY =
   "nexkripa-chat-history";
+
+/* =====================================
+   AI CHAT IMAGE
+===================================== */
+
+function AIChatImage({
+  size = 22,
+  className = "",
+}) {
+  return (
+    <Image
+      src="/aichatgpt.png"
+      alt="NexKripa AI Assistant"
+      width={size}
+      height={size}
+      className={className}
+      style={{
+        width: `${size}px`,
+        height: `${size}px`,
+        objectFit: "contain",
+        display: "block",
+      }}
+      priority
+    />
+  );
+}
 
 /* =====================================
    FORMAT BOT RESPONSE
@@ -499,9 +525,9 @@ export default function NexKripaChatbot() {
                 </button>
               ) : (
                 <div className="nk-chatbot-avatar">
-                  <BotMessageSquare
-                    size={20}
-                    strokeWidth={2}
+                  <AIChatImage
+                    size={28}
+                    className="nk-ai-chat-image"
                   />
                 </div>
               )}
@@ -638,11 +664,9 @@ export default function NexKripaChatbot() {
                         "assistant" && (
                         <div className="nk-message-avatar">
 
-                          <BotMessageSquare
-                            size={15}
-                            strokeWidth={
-                              2
-                            }
+                          <AIChatImage
+                            size={19}
+                            className="nk-ai-message-image"
                           />
 
                         </div>
@@ -717,11 +741,9 @@ export default function NexKripaChatbot() {
 
                     <div className="nk-message-avatar">
 
-                      <BotMessageSquare
-                        size={15}
-                        strokeWidth={
-                          2
-                        }
+                      <AIChatImage
+                        size={19}
+                        className="nk-ai-message-image"
                       />
 
                     </div>
@@ -827,9 +849,9 @@ export default function NexKripaChatbot() {
             strokeWidth={2}
           />
         ) : (
-          <BotMessageSquare
-            size={27}
-            strokeWidth={2}
+          <AIChatImage
+            size={38}
+            className="nk-ai-floating-image"
           />
         )}
 
