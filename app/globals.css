@@ -19614,3 +19614,31 @@ img.ref-footer-logo-image {
   }
 }
 
+.ref-footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+@media (max-width: 600px) {
+  .ref-footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .ref-footer-bottom-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    flex-wrap: nowrap;
+  }
+
+  .ref-footer-bottom-links a {
+    white-space: nowrap;
+    font-size: 10px;
+  }
+}
+

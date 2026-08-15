@@ -12,7 +12,7 @@ const menuItems = [
   { label: "CLIENTELE", href: "/clientele" },
   { label: "DEMOS", href: "/demos" },
   { label: "DEMO ACCESS", href: "/demo-access" },
-  // { label: "COLLAB", href: "/collab" },
+  { label: "PRICING", href: "/pricing" },
   { label: "CONTACT", href: "/contact" },
 ];
 
@@ -150,9 +150,9 @@ export default function Navbar() {
     if (href === "/demo-access") {
   return pathname === "/demo-access";
 }
-    // if (href === "/collab") {
-    //   return pathname === "/collab";
-    // }
+    if (href === "/pricing") {
+      return pathname === "/pricing";
+    }
 
     return pathname === href;
   };

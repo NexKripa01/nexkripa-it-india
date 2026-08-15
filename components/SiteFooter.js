@@ -13,6 +13,9 @@ import {
 
 const quickLinks = [
   ["Contact Us", "/contact"],
+  ["Pricing", "/pricing"],
+  ["Demos", "/demos"],
+  ["Demo Access", "/demo-access"],
   ["Services", "/services"],
   ["Clientele", "/clientele"],
   ["About Us", "/about"],
@@ -129,31 +132,27 @@ export default function SiteFooter() {
       </div>
 
       {/* FOOTER BOTTOM */}
-      <div className="ref-footer-bottom">
+<div className="ref-footer-bottom">
 
-        <p>
-          Copyright © 2026 NexKripa IT INDIA. All Rights Reserved.
-        </p>
+  <p>
+    Copyright © 2026 NexKripa IT INDIA. All Rights Reserved.
+  </p>
 
-        <div>
-        <Link href="/privacy-policy">
-          Privacy Policy
-        </Link>
-        </div>
+  <div className="ref-footer-bottom-links">
+    <Link href="/privacy-policy">
+      Privacy Policy
+    </Link>
 
-        <div>
-          <Link href="/faq">
-            FAQ
-          </Link>
-        </div>
+    <Link href="/faq">
+      FAQ
+    </Link>
 
-        <div>
-          <Link href="/blog">
-            Blog
-          </Link>
-        </div>
+    <Link href="/blog">
+      Blog
+    </Link>
+  </div>
 
-      </div>
+</div>
 
     </footer>
   );

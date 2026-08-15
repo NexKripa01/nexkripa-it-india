@@ -67,7 +67,7 @@ const teamMembers = [
   {
     number: "04",
     name: "Aaryan Saroj",
-    role: "MEMBER",
+    role: "CMO",
     work: "SOCIAL-MEDIA HANDELING",
     image: "/team/aaryan.png",
   },
