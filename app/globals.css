@@ -20266,12 +20266,19 @@ img.ref-footer-logo-image {
 
 .nk-chatbot-messages {
   flex: 1;
-
   padding: 20px;
-
   overflow-y: auto;
 
-  background: #080808;
+  background:
+    linear-gradient(
+      rgba(8, 8, 8, 0.5),
+      rgba(8, 8, 8, 0.5)
+    ),
+    url("/aichatbackground.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .nk-bot-message {
