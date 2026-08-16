@@ -21241,3 +21241,1188 @@ img.ref-footer-logo-image {
     overscroll-behavior-y: contain;
   }
 }
+/* =====================================
+   NEXKRIPA CHATBOT - PHASE 1 UI
+   Add this at the very end of globals.css
+===================================== */
+
+/* Message + CTA wrapper */
+.nk-message-content-wrap {
+  max-width: 78%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+.nk-user-row .nk-message-content-wrap {
+  align-items: flex-end;
+}
+
+.nk-message-content-wrap .nk-bot-message,
+.nk-message-content-wrap .nk-user-message {
+  max-width: 100%;
+}
+
+/* =====================================
+   SMART CTA BUTTONS
+===================================== */
+
+.nk-smart-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  width: 100%;
+}
+
+.nk-smart-actions button {
+  min-height: 32px;
+
+  padding: 7px 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nk-smart-actions button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.24);
+  transform: translateY(-1px);
+}
+
+.nk-smart-actions button svg {
+  flex-shrink: 0;
+}
+
+/* =====================================
+   FAQ SHORTCUTS
+===================================== */
+
+.nk-faq-shortcuts {
+  margin-top: 16px;
+}
+
+.nk-faq-shortcuts-title {
+  margin: 0 0 8px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nk-faq-shortcuts-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.nk-faq-shortcuts-list button {
+  padding: 7px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.67);
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.nk-faq-shortcuts-list button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* =====================================
+   BETTER TYPING STATE
+===================================== */
+
+.nk-chat-typing {
+  min-height: 39px;
+  height: auto;
+
+  padding: 9px 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Override older .nk-chat-typing span dot rules */
+.nk-chat-typing > .nk-chat-typing-label {
+  width: auto;
+  height: auto;
+
+  display: inline;
+
+  border-radius: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-size: 10px;
+  line-height: 1.2;
+
+  opacity: 1;
+
+  animation: none;
+  transform: none;
+}
+
+.nk-chat-typing-dots {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.nk-chat-typing-dots i {
+  width: 4px;
+  height: 4px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  animation: nkPhase1Typing 1.2s infinite;
+}
+
+.nk-chat-typing-dots i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.nk-chat-typing-dots i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes nkPhase1Typing {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+
+  30% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+/* =====================================
+   CHATBOT FOOTER + PRIVACY
+===================================== */
+
+.nk-chatbot-footer {
+  flex-shrink: 0;
+
+  background: #111111;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nk-chatbot-footer .nk-chatbot-input-area {
+  border-top: none;
+
+  padding-bottom: 6px;
+}
+
+.nk-chat-privacy {
+  padding: 0 13px 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 9px;
+  line-height: 1.35;
+
+  text-align: center;
+}
+
+.nk-chat-privacy svg {
+  flex-shrink: 0;
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+  .nk-message-content-wrap {
+    max-width: 84%;
+  }
+
+  .nk-smart-actions {
+    gap: 7px;
+  }
+
+  .nk-smart-actions button {
+    min-height: 34px;
+
+    padding: 8px 10px;
+
+    font-size: 11px;
+  }
+
+  .nk-faq-shortcuts-list button {
+    padding: 8px 11px;
+
+    font-size: 10px;
+  }
+
+  .nk-chat-privacy {
+    padding-bottom:
+      calc(
+        9px + env(safe-area-inset-bottom)
+      );
+  }
+}
+/* =====================================
+   SMART CTA VISIBILITY FIX
+   Add at the VERY END of app/globals.css
+===================================== */
+
+.nk-response-actions-wrapper {
+  width: calc(100% - 34px);
+  margin: -4px 0 16px 34px;
+}
+
+.nk-response-actions-wrapper .nk-smart-actions {
+  width: 100%;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.nk-response-actions-wrapper .nk-smart-actions button {
+  min-height: 34px;
+  padding: 8px 11px;
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 9px;
+
+  background: rgba(12, 12, 12, 0.9);
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nk-response-actions-wrapper .nk-smart-actions button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.nk-response-actions-wrapper .nk-smart-actions button svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .nk-response-actions-wrapper {
+    width: calc(100% - 34px);
+    margin-left: 34px;
+    margin-bottom: 16px;
+  }
+
+  .nk-response-actions-wrapper .nk-smart-actions button {
+    min-height: 36px;
+    padding: 9px 11px;
+  }
+}
+/* =====================================
+   NEXKRIPA CHATBOT - PHASE 3
+   SMART LEAD RECOMMENDATION
+   Add at the VERY END of globals.css
+===================================== */
+
+.nk-lead-context-card {
+  margin: 0 16px 14px;
+  padding: 12px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.nk-lead-context-icon {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.nk-lead-context-card > div:last-child {
+  min-width: 0;
+}
+
+.nk-lead-context-card span {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.nk-lead-context-card strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nk-lead-context-card p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .nk-lead-context-card {
+    margin: 0 14px 14px;
+    padding: 11px;
+  }
+}
+
+/* =====================================
+   ADMIN CHATBOT ANALYTICS
+   Add at the end of globals.css
+===================================== */
+
+.nk-admin-analytics {
+  margin: 36px 0 42px;
+  padding: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.nk-admin-analytics-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+
+  margin-bottom: 22px;
+}
+
+.nk-admin-analytics-head > div > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.nk-admin-analytics-head h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1;
+}
+
+.nk-admin-analytics-head p {
+  margin: 8px 0 0;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 12px;
+}
+
+.nk-admin-analytics-head button {
+  padding: 9px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+
+  cursor: pointer;
+}
+
+.nk-admin-analytics-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(140px, 1fr)
+    );
+
+  gap: 10px;
+}
+
+.nk-admin-analytics-grid article {
+  min-height: 108px;
+
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.nk-admin-analytics-grid article span {
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.nk-admin-analytics-grid article strong {
+  color: #ffffff;
+
+  font-size: 31px;
+  line-height: 1;
+}
+
+.nk-admin-analytics-grid
+.nk-admin-analytics-text-value {
+  font-size: 15px;
+
+  overflow-wrap: anywhere;
+}
+
+.nk-admin-analytics-recent {
+  margin-top: 18px;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
+  padding-top: 18px;
+}
+
+.nk-admin-analytics-recent-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  margin-bottom: 10px;
+}
+
+.nk-admin-analytics-recent-head h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  letter-spacing: 0.7px;
+}
+
+.nk-admin-analytics-recent-head span {
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 9px;
+}
+
+.nk-admin-analytics-activity-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.nk-admin-analytics-activity {
+  padding: 11px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+
+  background: rgba(0, 0, 0, 0.14);
+}
+
+.nk-admin-analytics-activity > div:first-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.nk-admin-analytics-activity strong {
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 11px;
+}
+
+.nk-admin-analytics-activity
+> div:first-child
+> span {
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 9px;
+}
+
+.nk-admin-analytics-activity-meta {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  gap: 3px;
+
+  text-align: right;
+}
+
+.nk-admin-analytics-activity-meta span {
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+}
+
+.nk-admin-analytics-activity-meta time {
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 9px;
+}
+
+.nk-admin-analytics-empty {
+  padding: 18px;
+
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+
+  color: rgba(255, 255, 255, 0.36);
+
+  font-size: 10px;
+
+  text-align: center;
+}
+
+.nk-admin-analytics-note {
+  margin: 14px 0 0;
+
+  color: rgba(255, 255, 255, 0.34);
+
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+@media (max-width: 680px) {
+  .nk-admin-analytics {
+    padding: 16px;
+  }
+
+  .nk-admin-analytics-head {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .nk-admin-analytics-head button {
+    align-self: flex-start;
+  }
+
+  .nk-admin-analytics-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .nk-admin-analytics-activity {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nk-admin-analytics-activity-meta {
+    align-items: flex-start;
+
+    text-align: left;
+  }
+}
+/* =====================================
+   ADMIN ANALYTICS ACTIONS
+   Add at the very end of globals.css
+===================================== */
+
+.nk-admin-analytics-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nk-admin-analytics-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nk-admin-clear-analytics {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.nk-admin-clear-analytics:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.nk-admin-analytics-success {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 680px) {
+  .nk-admin-analytics-actions {
+    width: 100%;
+  }
+
+  .nk-admin-analytics-actions button {
+    flex: 1;
+  }
+}
+/* =====================================
+   CHATBOT CONSULTATION BOOKING
+   Add at the VERY END of globals.css
+===================================== */
+
+.nk-consultation-view,
+.nk-email-capture-view {
+  overflow-y: auto;
+}
+
+.nk-consultation-form {
+  padding: 0 16px 18px;
+}
+
+.nk-consultation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.nk-consultation-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nk-consultation-form label > span {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.nk-consultation-form input,
+.nk-consultation-form select,
+.nk-consultation-form textarea {
+  width: 100%;
+  min-width: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.035);
+  color: #ffffff;
+
+  padding: 10px 11px;
+
+  font-size: 11px;
+  outline: none;
+}
+
+.nk-consultation-form input:focus,
+.nk-consultation-form select:focus,
+.nk-consultation-form textarea:focus {
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.nk-consultation-form select option {
+  color: #111111;
+}
+
+.nk-consultation-requirement {
+  margin-top: 10px;
+}
+
+.nk-consultation-form textarea {
+  resize: vertical;
+  min-height: 84px;
+}
+
+.nk-consultation-submit {
+  width: 100%;
+  min-height: 42px;
+
+  margin-top: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #111111;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+
+  cursor: pointer;
+}
+
+.nk-consultation-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.nk-consultation-error,
+.nk-email-capture-error {
+  margin-top: 10px;
+
+  padding: 9px 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.035);
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.nk-consultation-success {
+  margin-top: 10px;
+
+  padding: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.84);
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+/* =====================================
+   EMAIL CAPTURE
+===================================== */
+
+.nk-email-capture-card {
+  margin: auto;
+  width: min(100%, 330px);
+
+  padding: 26px 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.nk-email-capture-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+}
+
+.nk-email-capture-card h4 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 16px;
+}
+
+.nk-email-capture-card > p {
+  margin: 8px 0 16px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.nk-email-capture-card form {
+  width: 100%;
+}
+
+.nk-email-capture-card form input {
+  width: 100%;
+  min-height: 42px;
+
+  padding: 10px 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+
+  outline: none;
+}
+
+.nk-email-capture-card form input:focus {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.nk-email-capture-card form button {
+  width: 100%;
+  min-height: 42px;
+
+  margin-top: 9px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #111111;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.nk-email-capture-card form button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.nk-email-book-consultation {
+  margin-top: 12px;
+
+  border: none;
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 10px;
+
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .nk-consultation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nk-consultation-form {
+    padding:
+      0 14px
+      calc(
+        18px +
+        env(safe-area-inset-bottom)
+      );
+  }
+}
+/* =====================================
+   ADMIN CONSULTATION REQUESTS
+   Add at the end of globals.css
+===================================== */
+
+.nk-admin-consultations {
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+
+.nk-admin-consultations-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.nk-admin-consultations-head > div > span {
+  font-size: 10px;
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+.nk-admin-consultations-head h2 {
+  margin: 5px 0 4px;
+  font-size: clamp(22px, 3vw, 36px);
+}
+
+.nk-admin-consultations-head p {
+  margin: 0;
+  max-width: 560px;
+  opacity: 0.55;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.nk-admin-consultations-head button,
+.nk-admin-consultation-actions button {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  padding: 9px 12px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.nk-admin-consultations-head button:disabled,
+.nk-admin-consultation-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.nk-admin-consultations-list {
+  display: grid;
+  gap: 12px;
+}
+
+.nk-admin-consultation-card {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.nk-admin-consultation-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.nk-admin-consultation-type {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  opacity: 0.5;
+}
+
+.nk-admin-consultation-top h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.nk-admin-consultation-status {
+  padding: 6px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 999px;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+}
+
+.nk-admin-consultation-status.confirmed,
+.nk-admin-consultation-status.completed {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.nk-admin-consultation-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.nk-admin-consultation-details > div,
+.nk-admin-consultation-requirement {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.nk-admin-consultation-details span,
+.nk-admin-consultation-requirement > span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  opacity: 0.42;
+}
+
+.nk-admin-consultation-details strong {
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.nk-admin-consultation-requirement {
+  margin-top: 10px;
+}
+
+.nk-admin-consultation-requirement p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.55;
+  opacity: 0.72;
+  white-space: pre-wrap;
+}
+
+.nk-admin-consultation-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-size: 9px;
+  opacity: 0.42;
+}
+
+.nk-admin-consultation-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.nk-admin-consultation-delete {
+  margin-left: auto;
+}
+
+.nk-admin-consultations-empty,
+.nk-admin-consultations-error {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  font-size: 10px;
+  opacity: 0.65;
+}
+
+@media (max-width: 760px) {
+  .nk-admin-consultations-head {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .nk-admin-consultations-head button {
+    align-self: flex-start;
+  }
+
+  .nk-admin-consultation-details {
+    grid-template-columns: 1fr;
+  }
+
+  .nk-admin-consultation-delete {
+    margin-left: 0;
+  }
+}

@@ -7,7 +7,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: baseUrl,
-      lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1.0,
       images: [
@@ -26,7 +25,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -43,7 +41,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/portfolio`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
       images: [
@@ -56,7 +53,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/demos`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -70,21 +66,10 @@ export default function sitemap() {
     },
 
     // =========================================================
-    // DEMO ACCESS
-    // =========================================================
-    {
-      url: `${baseUrl}/demo-access`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-
-    // =========================================================
     // SERVICES HUB
     // =========================================================
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
       images: [
@@ -101,7 +86,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/services/website`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -116,7 +100,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/services/redesign`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -131,7 +114,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/services/ui-ux`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -145,7 +127,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/services/ai-automation`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -159,7 +140,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/services/crm`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -173,7 +153,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/services/e-commerce`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -187,7 +166,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/services/personal-branding`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -201,7 +179,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/services/corporate-branding`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -216,7 +193,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/services/database-maintenance`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -230,7 +206,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/services/it-consultancy`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
       images: [
@@ -244,7 +219,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/clientele`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
       images: [
@@ -257,7 +231,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/pricing`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -267,7 +240,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -277,7 +249,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -287,7 +258,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/blog/website`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -297,7 +267,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/blog/redesign`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -307,17 +276,15 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/blog/personal-branding`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
 
     // =========================================================
-    // BLOG - UI/UX
+    // BLOG - UI / UX
     // =========================================================
     {
       url: `${baseUrl}/blog/ui-ux`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -327,7 +294,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/blog/crm`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -337,7 +303,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/blog/ai-automation`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -347,7 +312,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/blog/ecommerce`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
@@ -357,7 +321,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
@@ -367,7 +330,6 @@ export default function sitemap() {
     // =========================================================
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,
     },

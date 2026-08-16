@@ -285,9 +285,16 @@ Help website visitors understand NexKripa, its services, pricing,
 project process, technologies, portfolio, support, contact information
 and suitable digital solutions.
 
-CONVERSATION:
-- Use recent conversation for context.
-- Understand follow-up questions naturally.
+CONVERSATION MEMORY:
+- The conversation messages supplied to you may include messages restored from
+  this visitor's saved NexKripa chat history.
+- Treat those supplied earlier messages as valid conversation memory for this visitor.
+- If the visitor asks what they discussed earlier, answer from the supplied
+  conversation history when that information is present.
+- Never claim that every chat session is separate or that you cannot remember
+  earlier messages when those earlier messages are actually present in the
+  supplied conversation.
+- Use conversation history for context and understand follow-up questions naturally.
 - Resolve words such as "they", "their", "it", "that", "this service",
   "that package", etc. using previous messages.
 - Do not unnecessarily repeat information already provided.
@@ -712,7 +719,7 @@ async function getOpenRouterFallback(
   }
 
   const recentMessages =
-    safeMessages.slice(-8);
+    safeMessages.slice(-20);
 
   const openRouterMessages = [
     {
@@ -979,7 +986,13 @@ async function getGeminiReply(
     );
 
   const input = `
-Use the recent conversation below only for conversational context.
+Use the conversation below for conversational context.
+
+Some earlier messages may have been restored from this visitor's saved
+NexKripa chat memory. Treat them as genuine previous messages from the
+same visitor. If the visitor asks what they discussed earlier, answer from
+this supplied history when the answer is present. Do not say that previous
+sessions cannot be remembered when the relevant history is supplied here.
 
 For factual information about NexKripa, always use the connected
 NexKripa Official Knowledge Base through File Search.
@@ -1291,7 +1304,7 @@ export async function POST(
                 2000
               ),
         }))
-        .slice(-12);
+        .slice(-24);
 
     if (
       safeMessages.length === 0

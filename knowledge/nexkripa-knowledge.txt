@@ -297,7 +297,7 @@ Starting Price:
 
 Includes:
 
-- Up to 50 Products
+- Up to 20 Products
 - Product & Category Management
 - Cart & Checkout
 - Payment Gateway Integration
