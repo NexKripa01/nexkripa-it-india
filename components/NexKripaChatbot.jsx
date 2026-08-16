@@ -645,7 +645,7 @@ function AIChatImage({
 }) {
   return (
     <Image
-      src="/aichatgpt.png"
+      src="/Aichatbot.png"
       alt="NexKripa AI Assistant"
       width={size}
       height={size}

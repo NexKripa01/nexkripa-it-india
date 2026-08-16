@@ -200,7 +200,7 @@ export default function Navbar() {
               aria-label="Open NexKripa AI Assistant"
             >
               <Image
-                src="/aichatgpt.png"
+                src="/Aichatbot.png"
                 alt="NexKripa AI Assistant"
                 width={30}
                 height={30}
