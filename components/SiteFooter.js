@@ -55,8 +55,8 @@ export default function SiteFooter() {
 
           <h2>Write to Us</h2>
 
-          <a href="mailto:nexkripa@gmail.com">
-            nexkripa@gmail.com
+          <a href="mailto:info@nexkripa.in">
+            info@nexkripa.in
           </a>
         </div>
 
