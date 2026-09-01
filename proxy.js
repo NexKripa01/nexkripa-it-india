@@ -4,9 +4,15 @@ export function proxy(request) {
   const { pathname } = request.nextUrl;
 
   /* =====================================
-     PUBLIC CHATBOT ANALYTICS POST
+     PUBLIC API ROUTES
   ===================================== */
 
+  // Chatbot memory
+  if (pathname === "/api/chat-memory") {
+    return NextResponse.next();
+  }
+
+  // Chatbot analytics
   if (
     pathname === "/api/chatbot-analytics" &&
     request.method === "POST"
@@ -14,10 +20,7 @@ export function proxy(request) {
     return NextResponse.next();
   }
 
-  /* =====================================
-     PUBLIC CONSULTATION POST
-  ===================================== */
-
+  // Public consultation form
   if (
     pathname === "/api/consultations" &&
     request.method === "POST"
@@ -26,54 +29,36 @@ export function proxy(request) {
   }
 
   /* =====================================
-     BASIC ADMIN AUTH
+     ADMIN ROUTES
   ===================================== */
 
-  const authHeader =
-    request.headers.get(
-      "authorization"
-    );
+  const authHeader = request.headers.get("authorization");
 
   if (authHeader) {
-    const [scheme, authValue] =
-      authHeader.split(" ");
+    const [scheme, authValue] = authHeader.split(" ");
 
-    if (
-      scheme === "Basic" &&
-      authValue
-    ) {
+    if (scheme === "Basic" && authValue) {
       try {
-        const decoded =
-          Buffer.from(
-            authValue,
-            "base64"
-          ).toString("utf-8");
+        const decoded = Buffer.from(
+          authValue,
+          "base64"
+        ).toString("utf-8");
 
-        const separatorIndex =
-          decoded.indexOf(":");
+        const separatorIndex = decoded.indexOf(":");
 
         const username =
           separatorIndex >= 0
-            ? decoded.slice(
-                0,
-                separatorIndex
-              )
+            ? decoded.slice(0, separatorIndex)
             : "";
 
         const password =
           separatorIndex >= 0
-            ? decoded.slice(
-                separatorIndex + 1
-              )
+            ? decoded.slice(separatorIndex + 1)
             : "";
 
         if (
-          username ===
-            process.env
-              .ADMIN_USERNAME &&
-          password ===
-            process.env
-              .ADMIN_PASSWORD
+          username === process.env.ADMIN_USERNAME &&
+          password === process.env.ADMIN_PASSWORD
         ) {
           return NextResponse.next();
         }
@@ -87,14 +72,13 @@ export function proxy(request) {
   }
 
   /* =====================================
-     UNAUTHORIZED
+     UNAUTHORIZED ADMIN ACCESS
   ===================================== */
 
   return new NextResponse(
     "Admin access required.",
     {
       status: 401,
-
       headers: {
         "WWW-Authenticate":
           'Basic realm="NexKripa Admin"',
@@ -107,6 +91,7 @@ export const config = {
   matcher: [
     "/admin/:path*",
     "/api/demo-requests/:path*",
+    "/api/chat-memory",
     "/api/chatbot-analytics",
     "/api/consultations",
   ],
